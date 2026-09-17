@@ -1,0 +1,9 @@
+/* TEAM */
+Creator: Seif / SEIF4D
+Website: https://seif4d.com/
+GitHub: https://github.com/seif4d
+
+/* SITE */
+Built with: HTML, CSS, JavaScript
+Style: Editorial minimalism, app-like mobile UX
+Focus: Performance, accessibility, SEO, GEO

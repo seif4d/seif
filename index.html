@@ -1,0 +1,978 @@
+<!doctype html>
+<html lang="en" data-theme="dark" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0a0c0d">
+  <meta name="color-scheme" content="dark">
+
+  <!-- Primary SEO Meta Tags -->
+  <title>SEIF4D — Developer, Builder &amp; Digital Product Creator | مطور ومنتجات رقمية</title>
+  <meta name="title" content="SEIF4D — Developer, Builder &amp; Digital Product Creator">
+  <meta name="description" content="SEIF4D is the portfolio of Seif — multidisciplinary developer, creative technologist, and venture builder based in Cairo, Egypt. Specializing in high-performance web applications, AI systems, and digital products.">
+  <meta name="keywords" content="SEIF4D, Seif, developer, web developer, AI systems, RAG, LLM, digital products, portfolio, frontend, JavaScript, React, cybersecurity, venture builder, Cairo, Egypt, مطور ويب, ذكاء اصطناعي, مصر">
+  <meta name="author" content="Seif / SEIF4D">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+  <link rel="canonical" href="https://seif4d.com/">
+
+  <!-- Geographic Meta Tags (GEO / Local SEO) -->
+  <meta name="geo.region" content="EG-C">
+  <meta name="geo.placename" content="Cairo, Egypt">
+  <meta name="geo.position" content="30.0444;31.2357">
+  <meta name="ICBM" content="30.0444, 31.2357">
+
+  <!-- Alternate Languages (hreflang) -->
+  <link rel="alternate" hreflang="en" href="https://seif4d.com/?lang=en">
+  <link rel="alternate" hreflang="ar" href="https://seif4d.com/?lang=ar">
+  <link rel="alternate" hreflang="x-default" href="https://seif4d.com/">
+
+  <!-- Performance Preloads -->
+  <link rel="preload" as="image" href="assets/hero-portrait.png" fetchpriority="high">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="ar_AR">
+  <meta property="og:site_name" content="SEIF4D">
+  <meta property="og:title" content="SEIF4D — Developer, Builder &amp; Digital Product Creator">
+  <meta property="og:description" content="I turn ideas into products, brands, AI systems and experiments — from concept to launch. Based in Cairo, building globally.">
+  <meta property="og:url" content="https://seif4d.com/">
+  <meta property="og:image" content="https://seif4d.com/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="SEIF4D — Creative Developer &amp; Product Creator">
+
+  <!-- Twitter / 𝕏 -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@seif4d">
+  <meta name="twitter:title" content="SEIF4D — Developer, Builder &amp; Digital Product Creator">
+  <meta name="twitter:description" content="Web, AI, products, brands and ventures — built with intent. Based in Cairo, Egypt.">
+  <meta name="twitter:image" content="https://seif4d.com/assets/og-card.png">
+  <meta name="twitter:creator" content="@seif4d">
+
+  <!-- Icons & Webmanifest -->
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <script>
+    if (window.location.protocol.startsWith('http')) {
+      const m = document.createElement('link');
+      m.rel = 'manifest';
+      m.href = 'site.webmanifest';
+      document.head.appendChild(m);
+    }
+  </script>
+
+  <!-- Generative Engine Optimization (LLMs Discovery) -->
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLMs.txt Summary">
+  <link rel="alternate" type="text/plain" href="llms-full.txt" title="LLMs-full.txt Context">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+
+  <!-- Comprehensive Schema.org Structured Data (SEO & GEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://seif4d.com/#person",
+        "name": "Seif",
+        "alternateName": ["SEIF4D", "سيف"],
+        "url": "https://seif4d.com/",
+        "image": "https://seif4d.com/assets/hero-portrait.png",
+        "jobTitle": "Creative Developer, AI Systems Engineer & Venture Builder",
+        "description": "Multidisciplinary developer and builder based in Cairo, Egypt, specializing in web applications, AI systems, digital products, and venture architecture.",
+        "nationality": {
+          "@type": "Country",
+          "name": "Egypt"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Cairo",
+          "addressCountry": "EG"
+        },
+        "knowsAbout": [
+          "Web Development",
+          "JavaScript",
+          "React",
+          "Node.js",
+          "Artificial Intelligence",
+          "Retrieval-Augmented Generation (RAG)",
+          "Cybersecurity",
+          "Digital Products",
+          "Branding",
+          "Venture Building",
+          "UI/UX Design"
+        ],
+        "sameAs": [
+          "https://github.com/seif4d",
+          "https://www.linkedin.com/in/seif4d",
+          "https://www.youtube.com/@seif4d",
+          "https://x.com/seif4d",
+          "https://huggingface.co/Seif4d"
+        ]
+      },
+      {
+        "@type": "ProfessionalService",
+        "@id": "https://seif4d.com/#service",
+        "name": "SEIF4D Digital Studio",
+        "founder": {"@id": "https://seif4d.com/#person"},
+        "url": "https://seif4d.com/",
+        "image": "https://seif4d.com/assets/og-card.png",
+        "priceRange": "$$",
+        "areaServed": [
+          {"@type": "Country", "name": "Egypt"},
+          {"@type": "Country", "name": "Saudi Arabia"},
+          {"@type": "Country", "name": "United Arab Emirates"},
+          {"@type": "AdministrativeArea", "name": "Worldwide Remote"}
+        ],
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 30.0444,
+          "longitude": 31.2357
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://seif4d.com/#website",
+        "url": "https://seif4d.com/",
+        "name": "SEIF4D",
+        "description": "Portfolio and digital home of Seif — developer, builder and multidisciplinary creator.",
+        "inLanguage": ["en", "ar"],
+        "author": {"@id": "https://seif4d.com/#person"}
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://seif4d.com/#webpage",
+        "url": "https://seif4d.com/",
+        "name": "SEIF4D — Developer, Builder & Digital Product Creator",
+        "isPartOf": {"@id": "https://seif4d.com/#website"},
+        "about": {"@id": "https://seif4d.com/#person"},
+        "primaryImageOfPage": {"@type": "ImageObject", "url": "https://seif4d.com/assets/og-card.png"},
+        "inLanguage": ["en", "ar"]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://seif4d.com/#selected-work",
+        "name": "Selected Work by SEIF4D",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Harmed",
+              "applicationCategory": "E-Commerce / Medical Wear",
+              "operatingSystem": "Web",
+              "url": "https://seif4d.github.io/Harmed/",
+              "description": "Modern e-commerce and brand presence for medical apparel with seamless web experience."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "Via Cairo",
+              "genre": "Cultural Travel Guide",
+              "description": "Bilingual digital travel and cultural platform celebrating the heritage of Cairo, Egypt."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "Qurani",
+              "applicationCategory": "Lifestyle / Spiritual",
+              "operatingSystem": "Web",
+              "url": "https://seif4d.github.io/GPT-Quran/",
+              "description": "Minimalist, fast digital companion for the Holy Quran with instant search and clean typography."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 4,
+            "item": {
+              "@type": "CreativeWork",
+              "name": "DRAGON",
+              "genre": "Developer Education Ecosystem",
+              "description": "Tech education and community platform empowering emerging developers through structured milestones."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 5,
+            "item": {
+              "@type": "ProfessionalService",
+              "name": "SCOPE",
+              "description": "Venture studio dedicated to turning bold product concepts into rapid, verified market MVPs."
+            }
+          },
+          {
+            "@type": "ListItem",
+            "position": 6,
+            "item": {
+              "@type": "SoftwareApplication",
+              "name": "VOLT",
+              "applicationCategory": "Service / Growth",
+              "operatingSystem": "Web",
+              "url": "https://voltmsg.store/",
+              "description": "High-conversion digital web experience built for service-oriented businesses."
+            }
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://seif4d.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What kinds of projects does SEIF4D specialize in?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "SEIF4D specializes in custom web applications, AI systems integration (RAG, agent workflows), digital product architecture, branding, and rapid MVP development."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is SEIF4D available for remote work and international clients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Based in Cairo, Egypt (UTC+3), SEIF4D works seamlessly with clients worldwide, including the GCC (Saudi Arabia, UAE), Europe, and North America."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does SEIF4D integrate Artificial Intelligence into products?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "By building practical, purpose-built AI solutions using LLMs, Retrieval-Augmented Generation (RAG), vector search, and Python/FastAPI microservices that solve actual user problems."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the typical development timeline for a new project or MVP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A focused MVP or landing experience typically takes between 2 to 6 weeks, moving methodically from discovery and UX architecture to build, test, and launch."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="a11y.skip">Skip to content</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="cursor-orb" aria-hidden="true"></div>
+
+  <!-- Main Site Header -->
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="SEIF4D home">
+      SEIF<span>4D</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#build" data-i18n="nav.build">Build</a>
+      <a href="#process" data-i18n="nav.process">Process</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="header-controls">
+      <!-- Command Palette Trigger -->
+      <button class="cmd-btn magnetic" id="cmd-trigger" type="button" aria-label="Open Command Palette" title="Command Palette (Ctrl+K)">
+        <span class="cmd-key">⌘K</span>
+        <span data-i18n="nav.terminal">Terminal</span>
+      </button>
+
+      <!-- Language Switcher -->
+      <button class="tool-btn lang-btn" id="lang-toggle" type="button" aria-label="Switch Language" title="Switch English / العربية">
+        <span class="lang-text">عربي</span>
+      </button>
+
+      <!-- Header CTA -->
+      <a class="header-cta" href="#contact">
+        <span data-i18n="nav.cta">Let’s build</span>
+        <span>↗</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button class="menu-btn" type="button" aria-label="Open menu" aria-controls="mobile-sheet" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Sheet -->
+  <div class="mobile-sheet" id="mobile-sheet" aria-hidden="true">
+    <div class="sheet-head">
+      <span>SEIF4D / INDEX</span>
+      <button type="button" aria-label="Close menu">×</button>
+    </div>
+    <nav aria-label="Mobile menu">
+      <a href="#work"><b>01</b> <span data-i18n="nav.work">Work</span> <span>↗</span></a>
+      <a href="#build"><b>02</b> <span data-i18n="nav.build">What I build</span> <span>↗</span></a>
+      <a href="#process"><b>03</b> <span data-i18n="nav.process">Process</span> <span>↗</span></a>
+      <a href="#about"><b>04</b> <span data-i18n="nav.about">About</span> <span>↗</span></a>
+      <a href="#faq"><b>05</b> <span data-i18n="nav.faq">FAQ</span> <span>↗</span></a>
+      <a href="#contact"><b>06</b> <span data-i18n="nav.contact">Contact</span> <span>↗</span></a>
+    </nav>
+    <div class="sheet-actions">
+      <button class="sheet-cmd-btn" id="sheet-cmd-trigger" type="button">
+        <span class="cmd-key">⌘K</span>
+        <span data-i18n="nav.terminalPrompt">Open Terminal</span>
+      </button>
+    </div>
+    <div class="sheet-socials">
+      <a href="https://github.com/seif4d" target="_blank" rel="me noopener noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/seif4d" target="_blank" rel="me noopener noreferrer">LinkedIn</a>
+      <a href="https://x.com/seif4d" target="_blank" rel="me noopener noreferrer">X / Twitter</a>
+      <a href="https://www.youtube.com/@seif4d" target="_blank" rel="me noopener noreferrer">YouTube</a>
+      <a href="https://huggingface.co/Seif4d" target="_blank" rel="me noopener noreferrer">Hugging Face</a>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1">
+    <!-- Hero Section -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy reveal">
+        <!-- Live Availability Badge & Cairo Time (GEO) -->
+        <div class="availability-pill" aria-label="Current status and timezone">
+          <span class="pulse-dot" aria-hidden="true"></span>
+          <span id="cairo-time-badge">Cairo 22:00 • Available for Q4 2026</span>
+        </div>
+
+        <p class="kicker"><span data-i18n="hero.kicker1">CREATIVE DEVELOPER</span> <span>×</span> <span data-i18n="hero.kicker2">BUILDER</span></p>
+        <h1 id="hero-title">SEIF4D</h1>
+        <h2 data-i18n="hero.tagline">I don’t fit into one box.<br><mark>So I build my own.</mark></h2>
+        <p class="hero-intro" data-i18n="hero.intro">Design. Code. Ideas. Impact.<br>I build digital products, brands, systems and experiments — from rough idea to something real.</p>
+
+        <div class="hero-actions">
+          <a class="button button-lime magnetic" href="#work">
+            <span data-i18n="hero.btnWork">Explore my work</span>
+            <span>→</span>
+          </a>
+          <a class="button button-ghost magnetic" href="#about">
+            <span data-i18n="hero.btnAbout">More about me</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <dl class="hero-stats" aria-label="Portfolio highlights">
+          <div>
+            <dt class="counter" data-target="6">06</dt>
+            <dd data-i18n="hero.stat1">Selected projects</dd>
+          </div>
+          <div>
+            <dt>∞</dt>
+            <dd data-i18n="hero.stat2">Ideas in motion</dd>
+          </div>
+          <div>
+            <dt>4D</dt>
+            <dd data-i18n="hero.stat3">Build · Learn · Evolve</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-art reveal" data-parallax>
+        <div class="brush brush-a" aria-hidden="true"></div>
+        <div class="brush brush-b" aria-hidden="true"></div>
+        <div class="hero-photo-wrap">
+          <img src="assets/hero-portrait.png" width="360" height="405" alt="Black and white SEIF4D portrait" fetchpriority="high">
+        </div>
+        <p class="scribble" aria-hidden="true" data-i18n="hero.scribble">Different<br>by Design.</p>
+        <div class="hero-tags" aria-label="Focus areas">
+          <span>WEB</span>
+          <span>AI</span>
+          <span>PRODUCT</span>
+          <span>VENTURES</span>
+        </div>
+      </div>
+
+      <aside class="hero-note reveal" aria-label="SEIF4D ethos">
+        <span class="note-line"></span>
+        <p data-i18n="hero.ethos">IDEAS<br>PRODUCTS<br>PEOPLE<br>A BRIGHTER<br>TOMORROW</p>
+      </aside>
+    </section>
+
+    <!-- Work Section -->
+    <section class="work section-dark" id="work" aria-labelledby="work-title">
+      <div class="section-top reveal">
+        <div>
+          <p class="section-index" data-i18n="work.index">01 / SELECTED WORK</p>
+          <h2 id="work-title" data-i18n="work.title">Ideas<br>into impact.</h2>
+        </div>
+        <p class="section-lead" data-i18n="work.lead">A curated set of real products, client work and ventures where code, design and strategy meet execution.</p>
+      </div>
+
+      <!-- Category Filter Pills -->
+      <div class="filter-bar reveal" role="tablist" aria-label="Filter portfolio projects">
+        <button class="filter-btn active" type="button" data-filter="all" data-i18n="filter.all">All Works (6)</button>
+        <button class="filter-btn" type="button" data-filter="web" data-i18n="filter.web">Web &amp; Apps (3)</button>
+        <button class="filter-btn" type="button" data-filter="ai" data-i18n="filter.ai">AI Systems (2)</button>
+        <button class="filter-btn" type="button" data-filter="venture" data-i18n="filter.venture">Ventures &amp; Studio (2)</button>
+      </div>
+
+      <div class="project-grid">
+        <!-- Project 01: Harmed -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="harmed" data-category="web">
+          <div class="card-head">
+            <div>
+              <h3>Harmed</h3>
+              <p data-i18n="proj.harmed.sub">Medical wear / Brand &amp; web</p>
+            </div>
+            <span>01</span>
+          </div>
+          <div class="project-media" aria-label="Open Harmed project preview">
+            <img src="assets/harmed.png" width="210" height="135" alt="Harmed project preview" loading="lazy" decoding="async">
+            <b>LIVE ↗</b>
+          </div>
+          <div class="card-tags">
+            <span>WEB</span><span>BRAND</span><span>CREATIVE</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+
+        <!-- Project 02: Via Cairo -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="via-cairo" data-category="web">
+          <div class="card-head">
+            <div>
+              <h3>Via Cairo</h3>
+              <p data-i18n="proj.viacairo.sub">Travel / Bilingual experience</p>
+            </div>
+            <span>02</span>
+          </div>
+          <div class="project-media" aria-label="Via Cairo case study preview">
+            <img src="assets/via-cairo.png" width="212" height="135" alt="Via Cairo project preview" loading="lazy" decoding="async">
+            <b>CASE STUDY</b>
+          </div>
+          <div class="card-tags">
+            <span>TRAVEL</span><span>UX</span><span>CAIRO</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+
+        <!-- Project 03: Qurani -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="qurani" data-category="ai web">
+          <div class="card-head">
+            <div>
+              <h3>Qurani</h3>
+              <p data-i18n="proj.qurani.sub">Quran / Digital product</p>
+            </div>
+            <span>03</span>
+          </div>
+          <div class="project-media" aria-label="Open Qurani project">
+            <img src="assets/qurani.png" width="209" height="135" alt="Qurani project preview" loading="lazy" decoding="async">
+            <b>LIVE ↗</b>
+          </div>
+          <div class="card-tags">
+            <span>JAVASCRIPT</span><span>PRODUCT</span><span>AI SEARCH</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+
+        <!-- Project 04: DRAGON -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="dragon" data-category="venture ai">
+          <div class="card-head">
+            <div>
+              <h3>DRAGON</h3>
+              <p data-i18n="proj.dragon.sub">Education / Community ecosystem</p>
+            </div>
+            <span>04</span>
+          </div>
+          <div class="project-media" aria-label="DRAGON venture preview">
+            <img src="assets/dragon.png" width="210" height="150" alt="DRAGON venture preview" loading="lazy" decoding="async">
+            <b>VENTURE</b>
+          </div>
+          <div class="card-tags">
+            <span>EDTECH</span><span>COMMUNITY</span><span>SYSTEMS</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+
+        <!-- Project 05: SCOPE -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="scope" data-category="venture">
+          <div class="card-head">
+            <div>
+              <h3>SCOPE</h3>
+              <p data-i18n="proj.scope.sub">Venture studio / Product building</p>
+            </div>
+            <span>05</span>
+          </div>
+          <div class="project-media" aria-label="SCOPE venture preview">
+            <img src="assets/scope.png" width="212" height="150" alt="SCOPE venture studio preview" loading="lazy" decoding="async">
+            <b>STUDIO</b>
+          </div>
+          <div class="card-tags">
+            <span>VENTURES</span><span>STRATEGY</span><span>BUILD</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+
+        <!-- Project 06: VOLT -->
+        <article class="project-card light-card reveal" data-tilt data-project-id="volt" data-category="web venture">
+          <div class="card-head">
+            <div>
+              <h3>VOLT</h3>
+              <p data-i18n="proj.volt.sub">Service brand / Web &amp; growth</p>
+            </div>
+            <span>06</span>
+          </div>
+          <div class="project-media" aria-label="Open VOLT website">
+            <img src="assets/volt.png" width="209" height="150" alt="VOLT project preview" loading="lazy" decoding="async">
+            <b>LIVE ↗</b>
+          </div>
+          <div class="card-tags">
+            <span>SERVICE</span><span>WEB</span><span>GROWTH</span>
+          </div>
+          <div class="card-click-hint">
+            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Build Section -->
+    <section class="build section-light" id="build" aria-labelledby="build-title">
+      <div class="section-top reveal">
+        <div>
+          <p class="section-index" data-i18n="build.index">02 / WHAT I BUILD</p>
+          <h2 id="build-title" data-i18n="build.title">Different skills.<br>One system.</h2>
+        </div>
+        <p class="section-lead dark-copy" data-i18n="build.lead">I connect technical execution, product thinking, design and business context to turn messy ideas into clear digital outcomes.</p>
+      </div>
+
+      <div class="capability-grid">
+        <article class="capability reveal">
+          <span>⌘</span>
+          <h3 data-i18n="build.c1.title">Web Development</h3>
+          <p data-i18n="build.c1.desc">Fast, responsive websites and web apps with clean front-end systems, zero bloat, and thoughtful UX.</p>
+          <small>HTML · CSS · JavaScript · React · Next.js</small>
+        </article>
+        <article class="capability reveal">
+          <span>✣</span>
+          <h3 data-i18n="build.c2.title">AI Systems</h3>
+          <p data-i18n="build.c2.desc">Practical AI features, RAG workflows, agentic architectures, and automations focused on useful outcomes.</p>
+          <small>LLMs · RAG · Python · FastAPI · Vector DBs</small>
+        </article>
+        <article class="capability reveal">
+          <span>◇</span>
+          <h3 data-i18n="build.c3.title">Cybersecurity</h3>
+          <p data-i18n="build.c3.desc">Security-minded product building, web vulnerability assessment, and infrastructure awareness.</p>
+          <small>Linux · Web Security · OWASP · Hardening</small>
+        </article>
+        <article class="capability reveal">
+          <span>✎</span>
+          <h3 data-i18n="build.c4.title">Brand &amp; Product</h3>
+          <p data-i18n="build.c4.desc">Positioning, visual direction, design systems, and digital experiences that feel coherent and memorable.</p>
+          <small>UI/UX · Branding · Design Systems · Strategy</small>
+        </article>
+        <article class="capability reveal">
+          <span>↗</span>
+          <h3 data-i18n="build.c5.title">Venture Building</h3>
+          <p data-i18n="build.c5.desc">From opportunity and rapid MVP to launch, user feedback loops, growth systems and iteration.</p>
+          <small>Research · Prototyping · Launch · Growth</small>
+        </article>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process section-dark" id="process" aria-labelledby="process-title">
+      <div class="section-top reveal">
+        <div>
+          <p class="section-index" data-i18n="process.index">03 / PROCESS</p>
+          <h2 id="process-title" data-i18n="process.title">A clearer path<br>to bolder outcomes<span>.</span></h2>
+        </div>
+        <p class="section-lead" data-i18n="process.lead">No theatre. Just a repeatable loop that moves from ambiguity to a product people can actually use.</p>
+      </div>
+
+      <ol class="process-track">
+        <li class="reveal">
+          <b>01</b>
+          <i>⌕</i>
+          <h3 data-i18n="process.s1.title">Explore</h3>
+          <p data-i18n="process.s1.desc">Understand the problem, user and opportunity before touching the interface.</p>
+        </li>
+        <li class="reveal">
+          <b>02</b>
+          <i>⌁</i>
+          <h3 data-i18n="process.s2.title">Build</h3>
+          <p data-i18n="process.s2.desc">Turn the strongest idea into a focused, testable, and robust experience.</p>
+        </li>
+        <li class="reveal">
+          <b>03</b>
+          <i>⟳</i>
+          <h3 data-i18n="process.s3.title">Iterate</h3>
+          <p data-i18n="process.s3.desc">Measure, learn, remove friction and make the product sharper.</p>
+        </li>
+        <li class="reveal">
+          <b>04</b>
+          <i>↗</i>
+          <h3 data-i18n="process.s4.title">Scale</h3>
+          <p data-i18n="process.s4.desc">Strengthen the system, infrastructure and growth loops around what works.</p>
+        </li>
+      </ol>
+
+      <div class="statement reveal">
+        <div>
+          <p data-i18n="process.statement">“Ideas mean nothing<br>without execution.”</p>
+        </div>
+        <img src="assets/mountains.png" width="660" height="120" alt="Mountain landscape" loading="lazy" decoding="async">
+        <div>
+          <span data-i18n="process.p1">BUILD</span>
+          <span data-i18n="process.p2">LEARN</span>
+          <span data-i18n="process.p3">ITERATE</span>
+          <span data-i18n="process.p4">GROW</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about section-light" id="about" aria-labelledby="about-title">
+      <div class="about-main reveal">
+        <p class="section-index" data-i18n="about.index">04 / ABOUT</p>
+        <h2 id="about-title" data-i18n="about.title">More than a portfolio.<br><mark>A mindset.</mark></h2>
+        <p data-i18n="about.desc">I’m Seif — the builder behind SEIF4D. Based in Cairo, Egypt, I work across web development, AI, digital products, branding and ventures. The common thread is simple: I like turning complicated ideas into useful, understandable things.</p>
+      </div>
+
+      <div class="about-panels">
+        <article class="about-panel reveal">
+          <b data-i18n="about.p1.kicker">TECH</b>
+          <h3 data-i18n="about.p1.title">Make it work.</h3>
+          <p data-i18n="about.p1.desc">Engineering decisions should serve the experience, not show off the stack.</p>
+        </article>
+        <article class="about-panel reveal">
+          <b data-i18n="about.p2.kicker">CREATIVITY</b>
+          <h3 data-i18n="about.p2.title">Make it memorable.</h3>
+          <p data-i18n="about.p2.desc">Good products need character, clarity and enough personality to be remembered.</p>
+        </article>
+        <article class="about-panel reveal">
+          <b data-i18n="about.p3.kicker">BUSINESS</b>
+          <h3 data-i18n="about.p3.title">Make it matter.</h3>
+          <p data-i18n="about.p3.desc">A beautiful interface is stronger when it understands the user, market and outcome.</p>
+        </article>
+      </div>
+
+      <div class="identity-strip reveal" aria-label="SEIF4D focus">
+        <span data-i18n="about.id1">DEVELOPER</span><i>×</i>
+        <span data-i18n="about.id2">BUILDER</span><i>×</i>
+        <span data-i18n="about.id3">EXPLORER</span><i>×</i>
+        <span data-i18n="about.id4">CREATOR</span>
+      </div>
+    </section>
+
+    <!-- FAQ Section (SEO & Generative Engine Optimization Engine) -->
+    <section class="faq-section section-dark" id="faq" aria-labelledby="faq-title">
+      <div class="section-top reveal">
+        <div>
+          <p class="section-index" data-i18n="faq.index">05 / KNOWLEDGE &amp; FAQ</p>
+          <h2 id="faq-title" data-i18n="faq.title">Direct answers.<br>Zero ambiguity.</h2>
+        </div>
+        <p class="section-lead" data-i18n="faq.lead">Transparent details on how I partner with founders, teams, and enterprises to build outstanding digital products.</p>
+      </div>
+
+      <div class="faq-container reveal">
+        <div class="faq-item">
+          <details>
+            <summary>
+              <span data-i18n="faq.q1">What kinds of projects does SEIF4D specialize in?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.a1">
+              I specialize in end-to-end digital experiences: high-performance web applications, bespoke frontend architectures, practical AI &amp; RAG implementations, and rapid MVP design for venture founders.
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <span data-i18n="faq.q2">Are you available for remote work and international clients?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.a2">
+              Yes, absolutely. While based in Cairo, Egypt (UTC+3), I routinely collaborate with partners across the Middle East (Saudi Arabia, UAE, Qatar), Europe, and North America with agile communication.
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <span data-i18n="faq.q3">How do you integrate Artificial Intelligence into products?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.a3">
+              I avoid gimmicks. I build functional AI systems: Retrieval-Augmented Generation (RAG) over proprietary knowledge bases, automated agent workflows, and fast semantic search that directly boost user efficiency.
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <span data-i18n="faq.q4">What is your typical development timeline and workflow?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.a4">
+              A standard sprint moves through four clear stages: Exploration &amp; Architecture (Week 1), Focused Prototyping &amp; Build (Weeks 2–3), Iteration &amp; Hardening (Week 4), and Production Launch.
+            </div>
+          </details>
+        </div>
+
+        <div class="faq-item">
+          <details>
+            <summary>
+              <span data-i18n="faq.q5">How can we start a collaboration or project?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </summary>
+            <div class="faq-answer" data-i18n="faq.a5">
+              Send an inquiry via email or reach out on GitHub, X, or YouTube. Share a brief summary of your vision, timeline, and goals, and we can schedule an initial discovery discussion.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Connect / Contact Section -->
+    <section class="connect section-dark" id="contact" aria-labelledby="contact-title">
+      <div class="connect-card reveal">
+        <p class="section-index" data-i18n="contact.index">06 / CONNECT</p>
+        <h2 id="contact-title" data-i18n="contact.title">Good ideas<br>find people.</h2>
+        <p data-i18n="contact.desc">Explore the work, follow what I’m building, or start a conversation on the platform you already use.</p>
+
+        <!-- Direct Email Copy Bar -->
+        <div class="direct-contact-bar">
+          <button class="copy-email-btn magnetic" id="copy-email-btn" type="button">
+            <span>📋</span>
+            <span id="email-text">contact@seif4d.com</span>
+          </button>
+          <a class="button button-lime magnetic" href="mailto:contact@seif4d.com">
+            <span data-i18n="contact.sendMail">Send direct email</span>
+            <span>↗</span>
+          </a>
+        </div>
+
+        <div class="social-grid">
+          <a href="https://github.com/seif4d" target="_blank" rel="me noopener noreferrer">
+            <span>GH</span>
+            <div>
+              <b>GitHub</b>
+              <small>@seif4d · code &amp; repositories</small>
+            </div>
+            <i>↗</i>
+          </a>
+          <a href="https://www.linkedin.com/in/seif4d" target="_blank" rel="me noopener noreferrer">
+            <span>in</span>
+            <div>
+              <b>LinkedIn</b>
+              <small>Seif · professional network</small>
+            </div>
+            <i>↗</i>
+          </a>
+          <a href="https://x.com/seif4d" target="_blank" rel="me noopener noreferrer">
+            <span>𝕏</span>
+            <div>
+              <b>X / Twitter</b>
+              <small>@seif4d · thoughts &amp; updates</small>
+            </div>
+            <i>↗</i>
+          </a>
+          <a href="https://www.youtube.com/@seif4d" target="_blank" rel="me noopener noreferrer">
+            <span>YT</span>
+            <div>
+              <b>YouTube</b>
+              <small>@seif4d · videos &amp; building</small>
+            </div>
+            <i>↗</i>
+          </a>
+          <a href="https://huggingface.co/Seif4d" target="_blank" rel="me noopener noreferrer">
+            <span>HF</span>
+            <div>
+              <b>Hugging Face</b>
+              <small>Seif4d · AI activity &amp; models</small>
+            </div>
+            <i>↗</i>
+          </a>
+          <a href="https://wa.me/201000000000?text=Hi%20Seif,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20collaborate!" target="_blank" rel="noopener noreferrer">
+            <span>WA</span>
+            <div>
+              <b>WhatsApp</b>
+              <small>Direct message · client chat</small>
+            </div>
+            <i>↗</i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div>
+      <a class="brand footer-brand" href="#top">SEIF<span>4D</span></a>
+      <p data-i18n="footer.tagline">Ideas. Products. Brands. Systems.</p>
+      <p style="color:#52585a;margin-top:4px;">📍 <span data-i18n="footer.location">Cairo, Egypt · Worldwide Remote</span></p>
+      <p class="privacy-note">🔒 <span data-i18n="footer.privacy">Zero cookies · No tracking · Privacy first</span></p>
+    </div>
+    <nav aria-label="Footer navigation">
+      <a href="#work" data-i18n="nav.work">Work</a>
+      <a href="#build" data-i18n="nav.build">Build</a>
+      <a href="#process" data-i18n="nav.process">Process</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <small>© <span id="year">2026</span> SEIF4D. <span data-i18n="footer.copy">Built for the web.</span></small>
+  </footer>
+
+  <!-- App-Style Mobile Bottom Navigation -->
+  <nav class="app-nav" aria-label="App-style mobile navigation">
+    <a href="#top" data-section="top" class="active">
+      <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M3 10.5 12 3l9 7.5V20a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+        <path d="M9 22V12h6v10"/>
+      </svg>
+      <small data-i18n="nav.home">Home</small>
+    </a>
+    <a href="#work" data-section="work">
+      <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="7" height="7" x="3" y="3" rx="2"/>
+        <rect width="7" height="7" x="14" y="3" rx="2"/>
+        <rect width="7" height="7" x="14" y="14" rx="2"/>
+        <rect width="7" height="7" x="3" y="14" rx="2"/>
+      </svg>
+      <small data-i18n="nav.work">Work</small>
+    </a>
+    <a href="#build" data-section="build">
+      <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="12 2 2 7 12 12 22 7 12 2"/>
+        <polyline points="2 17 12 22 22 17"/>
+        <polyline points="2 12 12 17 22 12"/>
+      </svg>
+      <small data-i18n="nav.build">Build</small>
+    </a>
+    <a href="#about" data-section="about">
+      <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="8" r="4"/>
+        <path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/>
+      </svg>
+      <small data-i18n="nav.about">About</small>
+    </a>
+    <button type="button" data-open-menu aria-label="Open navigation menu" aria-controls="mobile-sheet" aria-expanded="false">
+      <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <line x1="4" x2="20" y1="6" y2="6"/>
+        <line x1="4" x2="20" y1="12" y2="12"/>
+        <line x1="4" x2="20" y1="18" y2="18"/>
+      </svg>
+      <small data-i18n="nav.more">More</small>
+    </button>
+  </nav>
+
+  <!-- Project Detail Drawer Modal -->
+  <div class="drawer-backdrop" id="drawer-backdrop" aria-hidden="true">
+    <div class="project-drawer" id="project-drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title">
+      <div class="drawer-header">
+        <span class="drawer-category" id="drawer-category">WEB &amp; BRAND</span>
+        <button class="drawer-close-btn" id="drawer-close" type="button" aria-label="Close project details">×</button>
+      </div>
+      <div class="drawer-body">
+        <div class="drawer-img-wrap">
+          <img id="drawer-img" src="assets/harmed.png" alt="Project preview">
+        </div>
+        <div class="drawer-title-block">
+          <h2 id="drawer-title">Harmed</h2>
+          <p class="drawer-subtitle" id="drawer-subtitle">Medical wear / Brand &amp; web</p>
+        </div>
+
+        <dl class="drawer-grid-meta">
+          <div class="drawer-meta-item">
+            <dt data-i18n="drawer.type">Type</dt>
+            <dd id="drawer-type">E-Commerce &amp; Brand</dd>
+          </div>
+          <div class="drawer-meta-item">
+            <dt data-i18n="drawer.year">Timeline</dt>
+            <dd id="drawer-year">2026 Production</dd>
+          </div>
+          <div class="drawer-meta-item">
+            <dt data-i18n="drawer.role">Role</dt>
+            <dd id="drawer-role">Engineering &amp; Design</dd>
+          </div>
+          <div class="drawer-meta-item">
+            <dt data-i18n="drawer.status">Status</dt>
+            <dd id="drawer-status">Active / Live</dd>
+          </div>
+        </dl>
+
+        <div class="drawer-section">
+          <h4 data-i18n="drawer.overview">Overview &amp; Impact</h4>
+          <p id="drawer-overview">A bespoke digital storefront and brand identity created for medical apparel. Combines clean clinical precision with modern street apparel aesthetics.</p>
+        </div>
+
+        <div class="drawer-section">
+          <h4 data-i18n="drawer.stack">Technologies Used</h4>
+          <div class="drawer-tags" id="drawer-tags">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>UX Design</span>
+          </div>
+        </div>
+      </div>
+      <div class="drawer-footer">
+        <a class="button button-lime" id="drawer-live-btn" href="#" target="_blank" rel="noopener noreferrer">
+          <span data-i18n="drawer.visit">Visit Live Project</span> <span>↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Command Palette Modal -->
+  <div class="palette-backdrop" id="palette-backdrop" aria-hidden="true">
+    <div class="command-palette" role="dialog" aria-modal="true" aria-label="Command Palette">
+      <div class="palette-input-wrap">
+        <span class="palette-prompt-symbol">&gt;</span>
+        <input class="palette-input" id="palette-input" type="text" placeholder="Type a command (projects, skills, cairo, contact)..." autocomplete="off" spellcheck="false">
+        <span class="palette-esc">ESC</span>
+      </div>
+      <div class="palette-suggestions">
+        <button class="palette-chip" type="button" data-cmd="projects">projects</button>
+        <button class="palette-chip" type="button" data-cmd="skills">skills</button>
+        <button class="palette-chip" type="button" data-cmd="cairo">cairo</button>
+        <button class="palette-chip" type="button" data-cmd="contact">contact</button>
+        <button class="palette-chip" type="button" data-cmd="help">help</button>
+        <button class="palette-chip" type="button" data-cmd="matrix">matrix</button>
+      </div>
+      <div class="palette-results" id="palette-results">
+        <div class="palette-log info">SEIF4D Terminal v2.6. Type a command or click a chip above.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript Engine -->
+  <script src="script.js" defer></script>
+</body>
+</html>

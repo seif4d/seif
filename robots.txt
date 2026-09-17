@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Explicit AI & Generative Search Engine Permissions (GEO)
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Knowledge Base & Sitemaps
+Sitemap: https://seif4d.com/sitemap.xml
+# LLMs discovery standard
+# https://seif4d.com/llms.txt
+# https://seif4d.com/llms-full.txt

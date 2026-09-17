@@ -1,0 +1,13 @@
+{
+  "name": "SEIF4D — Portfolio",
+  "short_name": "SEIF4D",
+  "description": "Portfolio of Seif — developer, builder and digital product creator.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0a0c0d",
+  "theme_color": "#0a0c0d",
+  "icons": [
+    {"src":"assets/icon-192.png","sizes":"192x192","type":"image/png"},
+    {"src":"assets/icon-512.png","sizes":"512x512","type":"image/png"}
+  ]
+}
