@@ -71,203 +71,152 @@
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="creative.css">
   <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 
   <!-- Comprehensive Schema.org Structured Data (SEO & GEO) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Person",
-        "@id": "https://seif4d.com/#person",
-        "name": "Seif",
-        "alternateName": ["SEIF4D", "سيف"],
-        "url": "https://seif4d.com/",
-        "image": "https://seif4d.com/assets/hero-portrait.png",
-        "jobTitle": "Creative Developer, AI Systems Engineer & Venture Builder",
-        "description": "Multidisciplinary developer and builder based in Cairo, Egypt, specializing in web applications, AI systems, digital products, and venture architecture.",
-        "nationality": {
-          "@type": "Country",
-          "name": "Egypt"
-        },
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Cairo",
-          "addressCountry": "EG"
-        },
-        "knowsAbout": [
-          "Web Development",
-          "JavaScript",
-          "React",
-          "Node.js",
-          "Artificial Intelligence",
-          "Retrieval-Augmented Generation (RAG)",
-          "Cybersecurity",
-          "Digital Products",
-          "Branding",
-          "Venture Building",
-          "UI/UX Design"
-        ],
-        "sameAs": [
-          "https://github.com/seif4d",
-          "https://www.linkedin.com/in/seif4d",
-          "https://www.youtube.com/@seif4d",
-          "https://x.com/seif4d",
-          "https://huggingface.co/Seif4d"
-        ]
-      },
-      {
-        "@type": "ProfessionalService",
-        "@id": "https://seif4d.com/#service",
-        "name": "SEIF4D Digital Studio",
-        "founder": {"@id": "https://seif4d.com/#person"},
-        "url": "https://seif4d.com/",
-        "image": "https://seif4d.com/assets/og-card.png",
-        "priceRange": "$$",
-        "areaServed": [
-          {"@type": "Country", "name": "Egypt"},
-          {"@type": "Country", "name": "Saudi Arabia"},
-          {"@type": "Country", "name": "United Arab Emirates"},
-          {"@type": "AdministrativeArea", "name": "Worldwide Remote"}
-        ],
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 30.0444,
-          "longitude": 31.2357
-        }
-      },
-      {
-        "@type": "WebSite",
-        "@id": "https://seif4d.com/#website",
-        "url": "https://seif4d.com/",
-        "name": "SEIF4D",
-        "description": "Portfolio and digital home of Seif — developer, builder and multidisciplinary creator.",
-        "inLanguage": ["en", "ar"],
-        "author": {"@id": "https://seif4d.com/#person"}
-      },
-      {
-        "@type": "WebPage",
-        "@id": "https://seif4d.com/#webpage",
-        "url": "https://seif4d.com/",
-        "name": "SEIF4D — Developer, Builder & Digital Product Creator",
-        "isPartOf": {"@id": "https://seif4d.com/#website"},
-        "about": {"@id": "https://seif4d.com/#person"},
-        "primaryImageOfPage": {"@type": "ImageObject", "url": "https://seif4d.com/assets/og-card.png"},
-        "inLanguage": ["en", "ar"]
-      },
-      {
-        "@type": "ItemList",
-        "@id": "https://seif4d.com/#selected-work",
-        "name": "Selected Work by SEIF4D",
-        "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "Harmed",
-              "applicationCategory": "E-Commerce / Medical Wear",
-              "operatingSystem": "Web",
-              "url": "https://seif4d.github.io/Harmed/",
-              "description": "Modern e-commerce and brand presence for medical apparel with seamless web experience."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "item": {
-              "@type": "CreativeWork",
-              "name": "Via Cairo",
-              "genre": "Cultural Travel Guide",
-              "description": "Bilingual digital travel and cultural platform celebrating the heritage of Cairo, Egypt."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 3,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "Qurani",
-              "applicationCategory": "Lifestyle / Spiritual",
-              "operatingSystem": "Web",
-              "url": "https://seif4d.github.io/GPT-Quran/",
-              "description": "Minimalist, fast digital companion for the Holy Quran with instant search and clean typography."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 4,
-            "item": {
-              "@type": "CreativeWork",
-              "name": "DRAGON",
-              "genre": "Developer Education Ecosystem",
-              "description": "Tech education and community platform empowering emerging developers through structured milestones."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 5,
-            "item": {
-              "@type": "ProfessionalService",
-              "name": "SCOPE",
-              "description": "Venture studio dedicated to turning bold product concepts into rapid, verified market MVPs."
-            }
-          },
-          {
-            "@type": "ListItem",
-            "position": 6,
-            "item": {
-              "@type": "SoftwareApplication",
-              "name": "VOLT",
-              "applicationCategory": "Service / Growth",
-              "operatingSystem": "Web",
-              "url": "https://voltmsg.store/",
-              "description": "High-conversion digital web experience built for service-oriented businesses."
-            }
-          }
-        ]
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://seif4d.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What kinds of projects does SEIF4D specialize in?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "SEIF4D specializes in custom web applications, AI systems integration (RAG, agent workflows), digital product architecture, branding, and rapid MVP development."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Is SEIF4D available for remote work and international clients?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. Based in Cairo, Egypt (UTC+3), SEIF4D works seamlessly with clients worldwide, including the GCC (Saudi Arabia, UAE), Europe, and North America."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How does SEIF4D integrate Artificial Intelligence into products?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "By building practical, purpose-built AI solutions using LLMs, Retrieval-Augmented Generation (RAG), vector search, and Python/FastAPI microservices that solve actual user problems."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the typical development timeline for a new project or MVP?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "A focused MVP or landing experience typically takes between 2 to 6 weeks, moving methodically from discovery and UX architecture to build, test, and launch."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://seif4d.com/#person",
+      "name": "Seif",
+      "alternateName": [
+        "SEIF4D",
+        "سيف"
+      ],
+      "url": "https://seif4d.com/",
+      "jobTitle": "Developer & Product Builder",
+      "image": "https://seif4d.com/assets/hero-portrait-v2.jpg"
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://seif4d.com/#website",
+      "name": "SEIF4D",
+      "url": "https://seif4d.com/",
+      "inLanguage": [
+        "en",
+        "ar"
+      ],
+      "author": {
+        "@id": "https://seif4d.com/#person"
       }
-    ]
-  }
+    },
+    {
+      "@type": "ItemList",
+      "name": "Selected work by SEIF4D",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Harmed",
+            "description": "A medical apparel web and brand experience that brings clinical clarity together with a contemporary visual character.",
+            "url": "https://seif4d.com/work/harmed.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Via Cairo",
+            "description": "A bilingual travel product designed to turn discovering Cairo into a clear, mobile-first digital journey.",
+            "url": "https://seif4d.com/work/via-cairo.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "Qurani",
+            "description": "A focused Arabic reading experience built around clarity, responsive interaction and respectful visual restraint.",
+            "url": "https://seif4d.com/work/qurani.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "DRAGON",
+            "description": "A proposed learning ecosystem focused on helping emerging developers move from repeated tutorials to real building practice.",
+            "url": "https://seif4d.com/work/dragon.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "SCOPE",
+            "description": "A studio direction for researching opportunities, shaping focused products and turning selected ideas into testable builds.",
+            "url": "https://seif4d.com/work/scope.html"
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "CreativeWork",
+            "name": "VOLT",
+            "description": "A service-focused web presence structured to make the offer easier to understand and the next action easier to take.",
+            "url": "https://seif4d.com/work/volt.html"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What kinds of projects does SEIF4D specialize in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I specialize in end-to-end digital experiences: high-performance web applications, bespoke frontend architectures, practical AI & RAG implementations, and rapid MVP design for venture founders."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Are you available for remote work and international clients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. I am based in Cairo and available for remote project conversations. The delivery model and working hours are agreed for each engagement."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you integrate Artificial Intelligence into products?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "I assess AI as a product capability, then use it only when the data, workflow and user need justify it. Verified AI case studies will be published as their evidence becomes ready."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your typical development timeline and workflow?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each project moves through exploration, a focused build, review and launch. Timing depends on scope, content, integrations and the evidence needed to approve the release."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can we start a collaboration or project?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Send an inquiry via email or reach out on GitHub, X, or YouTube. Share a brief summary of your vision, timeline, and goals, and we can schedule an initial discovery discussion."
+          }
+        }
+      ]
+    }
+  ]
+}
   </script>
 </head>
 <body>
@@ -320,14 +269,14 @@
   </header>
 
   <!-- Mobile Fullscreen Sheet -->
-  <div class="mobile-sheet" id="mobile-sheet" aria-hidden="true">
+  <div class="mobile-sheet" id="mobile-sheet" role="dialog" aria-modal="true" aria-label="Navigation menu" aria-hidden="true">
     <div class="sheet-head">
       <span>SEIF4D / INDEX</span>
       <button type="button" aria-label="Close menu">×</button>
     </div>
     <nav aria-label="Mobile menu">
       <a href="#work"><b>01</b> <span data-i18n="nav.work">Work</span> <span>↗</span></a>
-      <a href="#build"><b>02</b> <span data-i18n="nav.build">What I build</span> <span>↗</span></a>
+      <a href="#build"><b>02</b> <span data-i18n="nav.build">Build</span> <span>↗</span></a>
       <a href="#process"><b>03</b> <span data-i18n="nav.process">Process</span> <span>↗</span></a>
       <a href="#about"><b>04</b> <span data-i18n="nav.about">About</span> <span>↗</span></a>
       <a href="#faq"><b>05</b> <span data-i18n="nav.faq">FAQ</span> <span>↗</span></a>
@@ -355,7 +304,7 @@
         <h1 id="hero-title">SEIF4D</h1>
         <p class="kicker"><span data-i18n="hero.kicker1">CREATIVE DEVELOPER</span> <span>×</span> <span data-i18n="hero.kicker2">BUILDER</span></p>
         <h2 class="typing-cursor" data-i18n="hero.tagline">I turn ideas into<br><mark>digital products.</mark></h2>
-        <p class="hero-intro" data-i18n="hero.intro">Strategy, design and engineering in one build process.<br>I create clear, fast web products for brands, founders and teams.</p>
+        <p class="hero-intro" data-i18n="hero.intro">Strategy, design and engineering in one build process. <br>I create clear, fast web products for brands, founders and teams.</p>
 
         <!-- Focus Tags -->
         <div class="hero-tags" aria-label="Focus areas">
@@ -450,9 +399,9 @@
       <!-- Category Filter Pills -->
       <div class="filter-bar reveal" role="group" aria-label="Filter portfolio projects">
         <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All Works (6)</button>
-        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false" data-i18n="filter.web">Web &amp; Apps (4)</button>
-        <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false" data-i18n="filter.ai">AI Systems (2)</button>
-        <button class="filter-btn" type="button" data-filter="venture" aria-pressed="false" data-i18n="filter.venture">Ventures &amp; Studio (3)</button>
+        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false" data-i18n="filter.web">Web & Apps (4)</button>
+        <button class="filter-btn" type="button" data-filter="product" aria-pressed="false" data-i18n="filter.ai">Digital products (2)</button>
+        <button class="filter-btn" type="button" data-filter="venture" aria-pressed="false" data-i18n="filter.venture">Ventures & Studio (3)</button>
       </div>
       <p class="sr-only" id="filter-status" aria-live="polite">Showing 6 projects</p>
 
@@ -462,7 +411,7 @@
           <div class="card-head">
             <div>
               <h3>Harmed</h3>
-              <p data-i18n="proj.harmed.sub">Medical wear / Brand &amp; web</p>
+              <p data-i18n="proj.harmed.sub">Medical wear / Brand & web</p>
             </div>
             <span>01</span>
           </div>
@@ -474,12 +423,12 @@
             <span>WEB</span><span>BRAND</span><span>CREATIVE</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
 
         <!-- Project 02: Via Cairo -->
-        <a href="work/via-cairo.html" class="project-card stagger-2 light-card reveal" data-tilt data-project-id="via-cairo" data-category="web" aria-label="Read the Via Cairo project case study">
+        <a href="work/via-cairo.html" class="project-card stagger-2 light-card reveal" data-project-id="via-cairo" data-category="web product" aria-label="Read the Via Cairo project case study">
           <div class="card-head">
             <div>
               <h3>Via Cairo</h3>
@@ -495,12 +444,12 @@
             <span>TRAVEL</span><span>UX</span><span>CAIRO</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
 
         <!-- Project 03: Qurani -->
-        <a href="work/qurani.html" class="project-card stagger-3 light-card reveal" data-tilt data-project-id="qurani" data-category="ai web" aria-label="Read the Qurani project case study">
+        <a href="work/qurani.html" class="project-card stagger-3 light-card reveal" data-project-id="qurani" data-category="product web" aria-label="Read the Qurani project case study">
           <div class="card-head">
             <div>
               <h3>Qurani</h3>
@@ -516,12 +465,12 @@
             <span>JAVASCRIPT</span><span>PRODUCT</span><span>AI SEARCH</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
 
         <!-- Project 04: DRAGON -->
-        <a href="work/dragon.html" class="project-card stagger-4 light-card reveal" data-tilt data-project-id="dragon" data-category="venture ai" aria-label="Read the DRAGON venture profile">
+        <a href="work/dragon.html" class="project-card stagger-4 light-card reveal" data-project-id="dragon" data-category="venture" aria-label="Read the DRAGON venture profile">
           <div class="card-head">
             <div>
               <h3>DRAGON</h3>
@@ -537,7 +486,7 @@
             <span>EDTECH</span><span>COMMUNITY</span><span>SYSTEMS</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
 
@@ -558,7 +507,7 @@
             <span>VENTURES</span><span>STRATEGY</span><span>BUILD</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
 
@@ -567,7 +516,7 @@
           <div class="card-head">
             <div>
               <h3>VOLT</h3>
-              <p data-i18n="proj.volt.sub">Service brand / Web &amp; growth</p>
+              <p data-i18n="proj.volt.sub">Service brand / Web & growth</p>
             </div>
             <span>06</span>
           </div>
@@ -579,7 +528,7 @@
             <span>SERVICE</span><span>WEB</span><span>GROWTH</span>
           </div>
           <div class="card-click-hint">
-            <span data-i18n="proj.hint">Quick View <i>↗</i></span>
+            <span data-i18n="proj.hint">Read case study</span>
           </div>
         </a>
       </div>
@@ -616,7 +565,7 @@
         </article>
         <article class="capability stagger-4 reveal">
           <span>✎</span>
-          <h3 data-i18n="build.c4.title">Brand &amp; Product</h3>
+          <h3 data-i18n="build.c4.title">Brand & Product</h3>
           <p data-i18n="build.c4.desc">Positioning, visual direction, design systems, and digital experiences that feel coherent and memorable.</p>
           <small>UI/UX · Branding · Design Systems · Strategy</small>
         </article>
@@ -724,7 +673,7 @@
     <section class="faq-section section-dark" id="faq" aria-labelledby="faq-title">
       <div class="section-top reveal">
         <div>
-          <p class="section-index" data-i18n="faq.index">05 / KNOWLEDGE &amp; FAQ</p>
+          <p class="section-index" data-i18n="faq.index">05 / KNOWLEDGE & FAQ</p>
           <h2 id="faq-title" data-i18n="faq.title">Direct answers.<br>Zero ambiguity.</h2>
         </div>
         <p class="section-lead" data-i18n="faq.lead">Transparent details on how I partner with founders, teams, and enterprises to build outstanding digital products.</p>
@@ -737,9 +686,7 @@
               <span data-i18n="faq.q1">What kinds of projects does SEIF4D specialize in?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer" data-i18n="faq.a1">
-              I specialize in end-to-end digital experiences: high-performance web applications, bespoke frontend architectures, practical AI &amp; RAG implementations, and rapid MVP design for venture founders.
-            </div>
+            <div class="faq-answer" data-i18n="faq.a1">I specialize in end-to-end digital experiences: high-performance web applications, bespoke frontend architectures, practical AI & RAG implementations, and rapid MVP design for venture founders.</div>
           </details>
         </div>
 
@@ -749,9 +696,7 @@
               <span data-i18n="faq.q2">Are you available for remote work and international clients?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer" data-i18n="faq.a2">
-              Yes, absolutely. While based in Cairo, Egypt (UTC+3), I routinely collaborate with partners across the Middle East (Saudi Arabia, UAE, Qatar), Europe, and North America with agile communication.
-            </div>
+            <div class="faq-answer" data-i18n="faq.a2">Yes. I am based in Cairo and available for remote project conversations. The delivery model and working hours are agreed for each engagement.</div>
           </details>
         </div>
 
@@ -761,9 +706,7 @@
               <span data-i18n="faq.q3">How do you integrate Artificial Intelligence into products?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer" data-i18n="faq.a3">
-              I avoid gimmicks. I build functional AI systems: Retrieval-Augmented Generation (RAG) over proprietary knowledge bases, automated agent workflows, and fast semantic search that directly boost user efficiency.
-            </div>
+            <div class="faq-answer" data-i18n="faq.a3">I assess AI as a product capability, then use it only when the data, workflow and user need justify it. Verified AI case studies will be published as their evidence becomes ready.</div>
           </details>
         </div>
 
@@ -773,9 +716,7 @@
               <span data-i18n="faq.q4">What is your typical development timeline and workflow?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer" data-i18n="faq.a4">
-              A standard sprint moves through four clear stages: Exploration &amp; Architecture (Week 1), Focused Prototyping &amp; Build (Weeks 2–3), Iteration &amp; Hardening (Week 4), and Production Launch.
-            </div>
+            <div class="faq-answer" data-i18n="faq.a4">Each project moves through exploration, a focused build, review and launch. Timing depends on scope, content, integrations and the evidence needed to approve the release.</div>
           </details>
         </div>
 
@@ -785,9 +726,7 @@
               <span data-i18n="faq.q5">How can we start a collaboration or project?</span>
               <span class="faq-icon" aria-hidden="true">+</span>
             </summary>
-            <div class="faq-answer" data-i18n="faq.a5">
-              Send an inquiry via email or reach out on GitHub, X, or YouTube. Share a brief summary of your vision, timeline, and goals, and we can schedule an initial discovery discussion.
-            </div>
+            <div class="faq-answer" data-i18n="faq.a5">Send an inquiry via email or reach out on GitHub, X, or YouTube. Share a brief summary of your vision, timeline, and goals, and we can schedule an initial discovery discussion.</div>
           </details>
         </div>
       </div>
@@ -799,6 +738,14 @@
         <p class="section-index" data-i18n="contact.index">06 / CONNECT</p>
         <h2 id="contact-title" data-i18n="contact.title">Good ideas<br>find people.</h2>
         <p data-i18n="contact.desc">Explore the work, follow what I’m building, or start a conversation on the platform you already use.</p>
+
+        <form class="project-brief" id="project-brief">
+          <div class="brief-field"><label for="brief-type" data-i18n="brief.type">What are we building?</label><select id="brief-type" name="type"><option value="Brand website" data-i18n="brief.brand">A website for my brand</option><option value="Digital product" data-i18n="brief.product">A digital product</option><option value="Partnership" data-i18n="brief.partner">A creative partnership</option></select></div>
+          <div class="brief-field"><label for="brief-message" data-i18n="brief.message">Your idea, in a few lines</label><textarea id="brief-message" name="message" rows="3" maxlength="2000" required></textarea></div>
+          <div class="brief-footer"><p data-i18n="brief.note">Prepare a draft in your email app. Nothing is sent automatically.</p><button class="button button-lime" type="submit" data-i18n="brief.submit">Prepare project email ↗</button></div>
+          <p id="brief-status" role="status"></p>
+          <a id="brief-mail" class="button button-lime" hidden data-i18n="brief.open">Open email draft ↗</a>
+        </form>
 
         <!-- Direct Email Copy Bar -->
         <div class="direct-contact-bar">
@@ -912,9 +859,8 @@
     </a>
     <a href="#contact" data-section="contact" aria-label="Contact Seif">
       <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="4" x2="20" y1="6" y2="6"/>
-        <line x1="4" x2="20" y1="12" y2="12"/>
-        <line x1="4" x2="20" y1="18" y2="18"/>
+        <rect x="3" y="5" width="18" height="14" rx="3"/>
+        <path d="m3 7 9 6 9-6"/>
       </svg>
       <small data-i18n="nav.contact">Contact</small>
     </a>
@@ -956,7 +902,7 @@
         </dl>
 
         <div class="drawer-section">
-          <h4 data-i18n="drawer.overview">Overview &amp; Impact</h4>
+          <h4 data-i18n="drawer.overview">Overview & Impact</h4>
           <p id="drawer-overview">A bespoke digital storefront and brand identity created for medical apparel. Combines clean clinical precision with modern street apparel aesthetics.</p>
         </div>
 

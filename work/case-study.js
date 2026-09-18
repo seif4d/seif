@@ -8,6 +8,7 @@
   const apply = (next, updateUrl = false) => {
     lang = next;
     document.body.dir = next === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.dir = document.body.dir;
     document.documentElement.lang = next;
     document.querySelector('[data-language]').textContent = next === 'ar' ? 'English' : 'العربية';
     document.title = document.body.dataset[next === 'ar' ? 'titleAr' : 'titleEn'];

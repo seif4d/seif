@@ -173,7 +173,7 @@ const translations = {
     "hero.kicker1": "CREATIVE DEVELOPER",
     "hero.kicker2": "BUILDER",
     "hero.tagline": "I turn ideas into<br><mark>digital products.</mark>",
-    "hero.intro": "Strategy, design and engineering in one build process.<br>I create clear, fast web products for brands, founders and teams.",
+    "hero.intro": "Strategy, design and engineering in one build process. <br>I create clear, fast web products for brands, founders and teams.",
     "hero.btnWork": "Explore my work",
     "hero.btnAbout": "Discuss a project",
     "hero.stat1": "Selected projects",
@@ -186,7 +186,15 @@ const translations = {
     "work.lead": "A curated set of real products, client work and ventures where code, design and strategy meet execution.",
     "filter.all": "All Works (6)",
     "filter.web": "Web & Apps (4)",
-    "filter.ai": "AI Systems (2)",
+    "filter.ai": "Digital products (2)",
+    "brief.type": "What are we building?",
+    "brief.brand": "A website for my brand",
+    "brief.product": "A digital product",
+    "brief.partner": "A creative partnership",
+    "brief.message": "Your idea, in a few lines",
+    "brief.note": "Prepare a draft in your email app. Nothing is sent automatically.",
+    "brief.submit": "Prepare project email ↗",
+    "brief.open": "Open email draft ↗",
     "filter.venture": "Ventures & Studio (3)",
     "proj.hint": "Read case study",
     "proj.harmed.sub": "Medical wear / Brand & web",
@@ -285,7 +293,7 @@ const translations = {
     "hero.kicker1": "مطور مبدع",
     "hero.kicker2": "مؤسس منتجات",
     "hero.tagline": "أحوّل الأفكار إلى<br><mark>منتجات رقمية.</mark>",
-    "hero.intro": "استراتيجية وتصميم وتطوير ضمن عملية بناء واحدة.<br>أصنع منتجات ويب واضحة وسريعة للعلامات ورواد الأعمال والفرق.",
+    "hero.intro": "استراتيجية وتصميم وتطوير ضمن عملية بناء واحدة. <br>أصنع منتجات ويب واضحة وسريعة للعلامات ورواد الأعمال والفرق.",
     "hero.btnWork": "استكشف أعمالي",
     "hero.btnAbout": "ناقش مشروعك",
     "hero.stat1": "مشاريع مختارة",
@@ -298,7 +306,15 @@ const translations = {
     "work.lead": "مجموعة منتقاة من المنتجات الحية ومشاريع العملاء والمبادرات التي يلتقي فيها الكود مع التصميم والاستراتيجية.",
     "filter.all": "كل الأعمال (6)",
     "filter.web": "الويب والتطبيقات (4)",
-    "filter.ai": "أنظمة الذكاء الاصطناعي (2)",
+    "filter.ai": "منتجات رقمية (2)",
+    "brief.type": "ماذا نبني معًا؟",
+    "brief.brand": "موقع لعلامتي التجارية",
+    "brief.product": "منتج رقمي",
+    "brief.partner": "شراكة إبداعية",
+    "brief.message": "فكرتك، في سطور قليلة",
+    "brief.note": "جهّز مسودة في تطبيق البريد لديك. لا يُرسل شيء تلقائيًا.",
+    "brief.submit": "جهّز بريد المشروع ↗",
+    "brief.open": "افتح مسودة البريد ↗",
     "filter.venture": "المشاريع والاستوديو (3)",
     "proj.hint": "اقرأ دراسة الحالة",
     "proj.harmed.sub": "أزياء طبية / هوية وتجارة إلكترونية",
@@ -405,6 +421,7 @@ class I18nEngine {
   }
 
   apply(lang, updateUrl = false) {
+    lang = lang === 'ar' ? 'ar' : 'en';
     this.current = lang;
     safeStorage.set('seif4d_lang', lang);
     document.documentElement.lang = lang;
@@ -429,6 +446,10 @@ class I18nEngine {
     }
 
     const dict = translations[lang] || translations.en;
+    const draftLink = $('#brief-mail');
+    if (draftLink) draftLink.hidden = true;
+    const draftStatus = $('#brief-status');
+    if (draftStatus) draftStatus.textContent = '';
     $$('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
       if (dict[key]) {
@@ -450,12 +471,41 @@ class I18nEngine {
     const contactDock = $('.app-nav a[data-section="contact"]');
     if (contactDock) contactDock.setAttribute('aria-label', lang === 'ar' ? 'تواصل مع سيف' : 'Contact Seif');
     const filterStatus = $('#filter-status');
-    if (filterStatus) filterStatus.textContent = lang === 'ar' ? 'عرض 6 مشاريع' : 'Showing 6 projects';
+    const visibleProjects = $$('.project-card').filter(card => !card.classList.contains('hidden')).length;
+    if (filterStatus) filterStatus.textContent = lang === 'ar' ? `عرض ${visibleProjects} مشاريع` : `Showing ${visibleProjects} projects`;
 
     updateCairoBadge();
   }
 }
 const i18n = new I18nEngine();
+
+// On mobile, the portrait starts full-frame then settles into a tighter cinematic crop.
+const heroPhotoWrap = $('.hero-photo-wrap');
+if (heroPhotoWrap && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  requestAnimationFrame(() => requestAnimationFrame(() => heroPhotoWrap.classList.add('cinematic-intro')));
+}
+
+const briefForm = $('#project-brief');
+if (briefForm) {
+  briefForm.addEventListener('submit', event => {
+    event.preventDefault();
+    const type = $('#brief-type');
+    const message = $('#brief-message').value.trim();
+    if (!message) { $('#brief-message').focus(); return; }
+    const label = type.options[type.selectedIndex].textContent;
+    const subject = encodeURIComponent(`SEIF4D — ${label}`);
+    const body = encodeURIComponent(`${label}\n\n${message}`);
+    const link = $('#brief-mail');
+    link.href = `mailto:contact@seif4d.com?subject=${subject}&body=${body}`;
+    link.hidden = false;
+    $('#brief-status').textContent = i18n.current === 'ar' ? 'المسودة جاهزة. افتحها لمراجعتها وإرسالها من بريدك.' : 'Your draft is ready. Open it to review and send from your email app.';
+    link.focus();
+  });
+  briefForm.addEventListener('input', () => {
+    $('#brief-mail').hidden = true;
+    $('#brief-status').textContent = '';
+  });
+}
 
 // ==========================================================================
 // 3. Project Detail Database & Modal Drawer
@@ -890,7 +940,7 @@ function executeCommand(raw) {
       break;
 
     default:
-      logToTerminal(`Command not found: "${cmd}". Type <b>help</b> for valid commands.`, 'dim');
+      logToTerminal('Command not found. Type <b>help</b> for valid commands.', 'dim');
       break;
   }
 }
@@ -972,7 +1022,7 @@ if (copyEmailBtn) {
 const canvas = document.getElementById('ambient-canvas');
 const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (canvas && !reducedMotion) {
+if (canvas && !reducedMotion && window.matchMedia('(min-width: 900px) and (pointer: fine)').matches) {
   const ctx = canvas.getContext('2d');
   let width, height;
   let particles = [];
@@ -1082,9 +1132,25 @@ const setMenu = (open) => {
   menuButton?.setAttribute('aria-expanded', String(open));
   appMenuButton?.setAttribute('aria-expanded', String(open));
   menu?.setAttribute('aria-hidden', String(!open));
+  if (open) requestAnimationFrame(() => closeButton?.focus());
+  else menuButton?.focus();
 };
 
+document.addEventListener('keydown', event => {
+  if (!menu?.classList.contains('open')) return;
+  if (event.key === 'Escape') { event.preventDefault(); setMenu(false); }
+  if (event.key === 'Tab') {
+    const focusable = [...menu.querySelectorAll('a[href],button')].filter(el => el.getClientRects().length);
+    const first = focusable[0], last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+  }
+});
+
 menuButton?.addEventListener('click', () => setMenu(!menu?.classList.contains('open')));
+menu?.addEventListener('transitionend', event => {
+  if (event.propertyName === 'transform' && menu.classList.contains('open') && !menu.contains(document.activeElement)) closeButton?.focus();
+});
 closeButton?.addEventListener('click', () => setMenu(false));
 appMenuButton?.addEventListener('click', () => setMenu(true));
 menu?.addEventListener('click', (e) => { if (e.target === menu) setMenu(false); });
@@ -1178,9 +1244,7 @@ const scrambleObserver = new IntersectionObserver((entries, obs) => {
   });
 }, { threshold: 0.5 });
 
-if (!reducedMotion && document.documentElement.lang !== 'ar') {
-  $$('.section-index').forEach(el => scrambleObserver.observe(el));
-}
+// Section labels stay readable in both languages, including while scrolling.
 
 // Navigation Scroll Spy
 const sectionIds = ['top', 'work', 'build', 'process', 'about', 'faq', 'contact'];
@@ -1206,8 +1270,8 @@ const onScroll = () => {
   const appSectionMap = {
     top: 'top',
     work: 'work',
-    build: 'build',
-    process: 'build',
+    build: 'work',
+    process: 'work',
     about: 'about',
     faq: 'about',
     contact: 'contact'
@@ -1235,13 +1299,13 @@ document.addEventListener('click', (e) => {
     const targetId = anchor.getAttribute('href');
     if (targetId === '#' || targetId === '#top') {
       e.preventDefault();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: reducedMotion ? 'auto' : 'smooth' });
     } else if (targetId && targetId.length > 1) {
       try {
         const el = document.querySelector(targetId);
         if (el) {
           e.preventDefault();
-          el.scrollIntoView({ behavior: 'smooth' });
+          el.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth' });
         }
       } catch (err) {}
     }
