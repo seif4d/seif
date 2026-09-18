@@ -27,7 +27,7 @@
   <link rel="alternate" hreflang="x-default" href="https://seif4d.com/">
 
   <!-- Performance Preloads -->
-  <link rel="preload" as="image" href="assets/hero-portrait.png" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/hero-portrait-v2.jpg" fetchpriority="high">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap">
@@ -279,7 +279,10 @@
   <!-- Main Site Header -->
   <header class="site-header">
     <a class="brand" href="#top" aria-label="SEIF4D home">
-      SEIF<span>4D</span>
+      <span class="brand-text">SEIF<span>4D</span></span>
+      <span class="brand-status" title="Available for Q4 2026">
+        <span class="pulse-dot" aria-hidden="true"></span>
+      </span>
     </a>
 
     <nav class="desktop-nav" aria-label="Primary navigation">
@@ -349,24 +352,26 @@
     <!-- Hero Section -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy reveal">
-        <!-- Live Availability Badge & Cairo Time (GEO) -->
-        <div class="availability-pill" aria-label="Current status and timezone">
-          <span class="pulse-dot" aria-hidden="true"></span>
-          <span id="cairo-time-badge">Cairo 22:00 • Available for Q4 2026</span>
-        </div>
-
-        <p class="kicker"><span data-i18n="hero.kicker1">CREATIVE DEVELOPER</span> <span>×</span> <span data-i18n="hero.kicker2">BUILDER</span></p>
         <h1 id="hero-title">SEIF4D</h1>
-        <h2 data-i18n="hero.tagline">I don’t fit into one box.<br><mark>So I build my own.</mark></h2>
-        <p class="hero-intro" data-i18n="hero.intro">Design. Code. Ideas. Impact.<br>I build digital products, brands, systems and experiments — from rough idea to something real.</p>
+        <p class="kicker"><span data-i18n="hero.kicker1">CREATIVE DEVELOPER</span> <span>×</span> <span data-i18n="hero.kicker2">BUILDER</span></p>
+        <h2 class="typing-cursor" data-i18n="hero.tagline">I turn ideas into<br><mark>digital products.</mark></h2>
+        <p class="hero-intro" data-i18n="hero.intro">Strategy, design and engineering in one build process.<br>I create clear, fast web products for brands, founders and teams.</p>
+
+        <!-- Focus Tags -->
+        <div class="hero-tags" aria-label="Focus areas">
+          <span>WEB</span>
+          <span>AI</span>
+          <span>PRODUCT</span>
+          <span>VENTURES</span>
+        </div>
 
         <div class="hero-actions">
           <a class="button button-lime magnetic" href="#work">
             <span data-i18n="hero.btnWork">Explore my work</span>
             <span>→</span>
           </a>
-          <a class="button button-ghost magnetic" href="#about">
-            <span data-i18n="hero.btnAbout">More about me</span>
+          <a class="button button-ghost magnetic" href="#contact">
+            <span data-i18n="hero.btnAbout">Discuss a project</span>
             <span>↗</span>
           </a>
         </div>
@@ -391,15 +396,9 @@
         <div class="brush brush-a" aria-hidden="true"></div>
         <div class="brush brush-b" aria-hidden="true"></div>
         <div class="hero-photo-wrap">
-          <img src="assets/hero-portrait.png" width="360" height="405" alt="Black and white SEIF4D portrait" fetchpriority="high">
+          <img src="assets/hero-portrait-v2.jpg" width="1254" height="1254" alt="Black and white portrait of Seif" fetchpriority="high" decoding="async">
         </div>
         <p class="scribble" aria-hidden="true" data-i18n="hero.scribble">Different<br>by Design.</p>
-        <div class="hero-tags" aria-label="Focus areas">
-          <span>WEB</span>
-          <span>AI</span>
-          <span>PRODUCT</span>
-          <span>VENTURES</span>
-        </div>
       </div>
 
       <aside class="hero-note reveal" aria-label="SEIF4D ethos">
@@ -407,6 +406,36 @@
         <p data-i18n="hero.ethos">IDEAS<br>PRODUCTS<br>PEOPLE<br>A BRIGHTER<br>TOMORROW</p>
       </aside>
     </section>
+
+    <!-- Tech Ticker Strip -->
+    <div class="tech-ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>JAVASCRIPT</span><span>·</span>
+        <span>REACT</span><span>·</span>
+        <span>NEXT.JS</span><span>·</span>
+        <span>PYTHON</span><span>·</span>
+        <span>FASTAPI</span><span>·</span>
+        <span>AI / RAG</span><span>·</span>
+        <span>LLMs</span><span>·</span>
+        <span>VECTOR DBs</span><span>·</span>
+        <span>CSS / UI</span><span>·</span>
+        <span>NODE.JS</span><span>·</span>
+        <span>LINUX</span><span>·</span>
+        <span>WEB SECURITY</span><span>·</span>
+        <span>JAVASCRIPT</span><span>·</span>
+        <span>REACT</span><span>·</span>
+        <span>NEXT.JS</span><span>·</span>
+        <span>PYTHON</span><span>·</span>
+        <span>FASTAPI</span><span>·</span>
+        <span>AI / RAG</span><span>·</span>
+        <span>LLMs</span><span>·</span>
+        <span>VECTOR DBs</span><span>·</span>
+        <span>CSS / UI</span><span>·</span>
+        <span>NODE.JS</span><span>·</span>
+        <span>LINUX</span><span>·</span>
+        <span>WEB SECURITY</span><span>·</span>
+      </div>
+    </div>
 
     <!-- Work Section -->
     <section class="work section-dark" id="work" aria-labelledby="work-title">
@@ -419,16 +448,17 @@
       </div>
 
       <!-- Category Filter Pills -->
-      <div class="filter-bar reveal" role="tablist" aria-label="Filter portfolio projects">
-        <button class="filter-btn active" type="button" data-filter="all" data-i18n="filter.all">All Works (6)</button>
-        <button class="filter-btn" type="button" data-filter="web" data-i18n="filter.web">Web &amp; Apps (3)</button>
-        <button class="filter-btn" type="button" data-filter="ai" data-i18n="filter.ai">AI Systems (2)</button>
-        <button class="filter-btn" type="button" data-filter="venture" data-i18n="filter.venture">Ventures &amp; Studio (2)</button>
+      <div class="filter-bar reveal" role="group" aria-label="Filter portfolio projects">
+        <button class="filter-btn active" type="button" data-filter="all" aria-pressed="true" data-i18n="filter.all">All Works (6)</button>
+        <button class="filter-btn" type="button" data-filter="web" aria-pressed="false" data-i18n="filter.web">Web &amp; Apps (4)</button>
+        <button class="filter-btn" type="button" data-filter="ai" aria-pressed="false" data-i18n="filter.ai">AI Systems (2)</button>
+        <button class="filter-btn" type="button" data-filter="venture" aria-pressed="false" data-i18n="filter.venture">Ventures &amp; Studio (3)</button>
       </div>
+      <p class="sr-only" id="filter-status" aria-live="polite">Showing 6 projects</p>
 
       <div class="project-grid">
         <!-- Project 01: Harmed -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="harmed" data-category="web">
+        <a href="work/harmed.html" class="project-card stagger-1 light-card reveal" data-tilt data-project-id="harmed" data-category="web" aria-label="Read the Harmed project case study">
           <div class="card-head">
             <div>
               <h3>Harmed</h3>
@@ -437,7 +467,7 @@
             <span>01</span>
           </div>
           <div class="project-media" aria-label="Open Harmed project preview">
-            <img src="assets/harmed.png" width="210" height="135" alt="Harmed project preview" loading="lazy" decoding="async">
+            <img src="assets/harmed-cover-v2.jpg" width="1448" height="1086" alt="Charcoal medical scrubs presented in a precise contemporary studio" loading="lazy" decoding="async">
             <b>LIVE ↗</b>
           </div>
           <div class="card-tags">
@@ -446,10 +476,10 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
 
         <!-- Project 02: Via Cairo -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="via-cairo" data-category="web">
+        <a href="work/via-cairo.html" class="project-card stagger-2 light-card reveal" data-tilt data-project-id="via-cairo" data-category="web" aria-label="Read the Via Cairo project case study">
           <div class="card-head">
             <div>
               <h3>Via Cairo</h3>
@@ -458,7 +488,7 @@
             <span>02</span>
           </div>
           <div class="project-media" aria-label="Via Cairo case study preview">
-            <img src="assets/via-cairo.png" width="212" height="135" alt="Via Cairo project preview" loading="lazy" decoding="async">
+            <img src="assets/via-cairo-cover-v2.jpg" width="1448" height="1086" alt="Layered Cairo architecture and route map forming a digital travel journey" loading="lazy" decoding="async">
             <b>CASE STUDY</b>
           </div>
           <div class="card-tags">
@@ -467,10 +497,10 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
 
         <!-- Project 03: Qurani -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="qurani" data-category="ai web">
+        <a href="work/qurani.html" class="project-card stagger-3 light-card reveal" data-tilt data-project-id="qurani" data-category="ai web" aria-label="Read the Qurani project case study">
           <div class="card-head">
             <div>
               <h3>Qurani</h3>
@@ -479,7 +509,7 @@
             <span>03</span>
           </div>
           <div class="project-media" aria-label="Open Qurani project">
-            <img src="assets/qurani.png" width="209" height="135" alt="Qurani project preview" loading="lazy" decoding="async">
+            <img src="assets/qurani-cover-v2.jpg" width="1448" height="1086" alt="An open blank book in a calm architectural reading space" loading="lazy" decoding="async">
             <b>LIVE ↗</b>
           </div>
           <div class="card-tags">
@@ -488,10 +518,10 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
 
         <!-- Project 04: DRAGON -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="dragon" data-category="venture ai">
+        <a href="work/dragon.html" class="project-card stagger-4 light-card reveal" data-tilt data-project-id="dragon" data-category="venture ai" aria-label="Read the DRAGON venture profile">
           <div class="card-head">
             <div>
               <h3>DRAGON</h3>
@@ -500,7 +530,7 @@
             <span>04</span>
           </div>
           <div class="project-media" aria-label="DRAGON venture preview">
-            <img src="assets/dragon.png" width="210" height="150" alt="DRAGON venture preview" loading="lazy" decoding="async">
+            <img src="assets/dragon-cover-v2.jpg" width="1448" height="1086" alt="Connected learning platforms rising toward an open gateway" loading="lazy" decoding="async">
             <b>VENTURE</b>
           </div>
           <div class="card-tags">
@@ -509,10 +539,10 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
 
         <!-- Project 05: SCOPE -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="scope" data-category="venture">
+        <a href="work/scope.html" class="project-card stagger-5 light-card reveal" data-tilt data-project-id="scope" data-category="venture" aria-label="Read the SCOPE studio profile">
           <div class="card-head">
             <div>
               <h3>SCOPE</h3>
@@ -521,7 +551,7 @@
             <span>05</span>
           </div>
           <div class="project-media" aria-label="SCOPE venture preview">
-            <img src="assets/scope.png" width="212" height="150" alt="SCOPE venture studio preview" loading="lazy" decoding="async">
+            <img src="assets/scope-cover-v2.jpg" width="1448" height="1086" alt="A luminous idea evolving through four physical product prototypes" loading="lazy" decoding="async">
             <b>STUDIO</b>
           </div>
           <div class="card-tags">
@@ -530,10 +560,10 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
 
         <!-- Project 06: VOLT -->
-        <article class="project-card light-card reveal" data-tilt data-project-id="volt" data-category="web venture">
+        <a href="work/volt.html" class="project-card stagger-6 light-card reveal" data-tilt data-project-id="volt" data-category="web venture" aria-label="Read the VOLT project case study">
           <div class="card-head">
             <div>
               <h3>VOLT</h3>
@@ -542,7 +572,7 @@
             <span>06</span>
           </div>
           <div class="project-media" aria-label="Open VOLT website">
-            <img src="assets/volt.png" width="209" height="150" alt="VOLT project preview" loading="lazy" decoding="async">
+            <img src="assets/volt-cover-v2.jpg" width="1448" height="1086" alt="A luminous service path connecting inquiry, schedule and delivery" loading="lazy" decoding="async">
             <b>LIVE ↗</b>
           </div>
           <div class="card-tags">
@@ -551,7 +581,7 @@
           <div class="card-click-hint">
             <span data-i18n="proj.hint">Quick View <i>↗</i></span>
           </div>
-        </article>
+        </a>
       </div>
     </section>
 
@@ -566,31 +596,31 @@
       </div>
 
       <div class="capability-grid">
-        <article class="capability reveal">
+        <article class="capability stagger-1 reveal">
           <span>⌘</span>
           <h3 data-i18n="build.c1.title">Web Development</h3>
           <p data-i18n="build.c1.desc">Fast, responsive websites and web apps with clean front-end systems, zero bloat, and thoughtful UX.</p>
           <small>HTML · CSS · JavaScript · React · Next.js</small>
         </article>
-        <article class="capability reveal">
+        <article class="capability stagger-2 reveal">
           <span>✣</span>
           <h3 data-i18n="build.c2.title">AI Systems</h3>
           <p data-i18n="build.c2.desc">Practical AI features, RAG workflows, agentic architectures, and automations focused on useful outcomes.</p>
           <small>LLMs · RAG · Python · FastAPI · Vector DBs</small>
         </article>
-        <article class="capability reveal">
+        <article class="capability stagger-3 reveal">
           <span>◇</span>
           <h3 data-i18n="build.c3.title">Cybersecurity</h3>
           <p data-i18n="build.c3.desc">Security-minded product building, web vulnerability assessment, and infrastructure awareness.</p>
           <small>Linux · Web Security · OWASP · Hardening</small>
         </article>
-        <article class="capability reveal">
+        <article class="capability stagger-4 reveal">
           <span>✎</span>
           <h3 data-i18n="build.c4.title">Brand &amp; Product</h3>
           <p data-i18n="build.c4.desc">Positioning, visual direction, design systems, and digital experiences that feel coherent and memorable.</p>
           <small>UI/UX · Branding · Design Systems · Strategy</small>
         </article>
-        <article class="capability reveal">
+        <article class="capability stagger-5 reveal">
           <span>↗</span>
           <h3 data-i18n="build.c5.title">Venture Building</h3>
           <p data-i18n="build.c5.desc">From opportunity and rapid MVP to launch, user feedback loops, growth systems and iteration.</p>
@@ -610,25 +640,25 @@
       </div>
 
       <ol class="process-track">
-        <li class="reveal">
+        <li class="stagger-1 reveal">
           <b>01</b>
           <i>⌕</i>
           <h3 data-i18n="process.s1.title">Explore</h3>
           <p data-i18n="process.s1.desc">Understand the problem, user and opportunity before touching the interface.</p>
         </li>
-        <li class="reveal">
+        <li class="stagger-2 reveal">
           <b>02</b>
           <i>⌁</i>
           <h3 data-i18n="process.s2.title">Build</h3>
           <p data-i18n="process.s2.desc">Turn the strongest idea into a focused, testable, and robust experience.</p>
         </li>
-        <li class="reveal">
+        <li class="stagger-3 reveal">
           <b>03</b>
           <i>⟳</i>
           <h3 data-i18n="process.s3.title">Iterate</h3>
           <p data-i18n="process.s3.desc">Measure, learn, remove friction and make the product sharper.</p>
         </li>
-        <li class="reveal">
+        <li class="stagger-4 reveal">
           <b>04</b>
           <i>↗</i>
           <h3 data-i18n="process.s4.title">Scale</h3>
@@ -677,10 +707,16 @@
       </div>
 
       <div class="identity-strip reveal" aria-label="SEIF4D focus">
-        <span data-i18n="about.id1">DEVELOPER</span><i>×</i>
-        <span data-i18n="about.id2">BUILDER</span><i>×</i>
-        <span data-i18n="about.id3">EXPLORER</span><i>×</i>
-        <span data-i18n="about.id4">CREATOR</span>
+        <div class="identity-strip-track">
+          <span data-i18n="about.id1">DEVELOPER</span><i>×</i>
+          <span data-i18n="about.id2">BUILDER</span><i>×</i>
+          <span data-i18n="about.id3">EXPLORER</span><i>×</i>
+          <span data-i18n="about.id4">CREATOR</span><i>×</i>
+          <span>DEVELOPER</span><i>×</i>
+          <span>BUILDER</span><i>×</i>
+          <span>EXPLORER</span><i>×</i>
+          <span>CREATOR</span><i>×</i>
+        </div>
       </div>
     </section>
 
@@ -817,14 +853,6 @@
             </div>
             <i>↗</i>
           </a>
-          <a href="https://wa.me/201000000000?text=Hi%20Seif,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20collaborate!" target="_blank" rel="noopener noreferrer">
-            <span>WA</span>
-            <div>
-              <b>WhatsApp</b>
-              <small>Direct message · client chat</small>
-            </div>
-            <i>↗</i>
-          </a>
         </div>
       </div>
     </section>
@@ -882,14 +910,14 @@
       </svg>
       <small data-i18n="nav.about">About</small>
     </a>
-    <button type="button" data-open-menu aria-label="Open navigation menu" aria-controls="mobile-sheet" aria-expanded="false">
+    <a href="#contact" data-section="contact" aria-label="Contact Seif">
       <svg class="app-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.85" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
         <line x1="4" x2="20" y1="6" y2="6"/>
         <line x1="4" x2="20" y1="12" y2="12"/>
         <line x1="4" x2="20" y1="18" y2="18"/>
       </svg>
-      <small data-i18n="nav.more">More</small>
-    </button>
+      <small data-i18n="nav.contact">Contact</small>
+    </a>
   </nav>
 
   <!-- Project Detail Drawer Modal -->
@@ -901,7 +929,7 @@
       </div>
       <div class="drawer-body">
         <div class="drawer-img-wrap">
-          <img id="drawer-img" src="assets/harmed.png" alt="Project preview">
+          <img id="drawer-img" src="assets/harmed-cover-v2.jpg" alt="Project preview">
         </div>
         <div class="drawer-title-block">
           <h2 id="drawer-title">Harmed</h2>
@@ -968,6 +996,11 @@
       </div>
     </div>
   </div>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
 
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>

@@ -6,6 +6,14 @@
 // Utility Helpers
 const $ = (s, c = document) => c.querySelector(s);
 const $$ = (s, c = document) => [...c.querySelectorAll(s)];
+const safeStorage = {
+  get(key) {
+    try { return window.localStorage.getItem(key); } catch (_) { return null; }
+  },
+  set(key, value) {
+    try { window.localStorage.setItem(key, value); } catch (_) {}
+  }
+};
 
 // ==========================================================================
 // 1. Audio Synthesizer (Web Audio API - Zero External Audio Files)
@@ -13,7 +21,7 @@ const $$ = (s, c = document) => [...c.querySelectorAll(s)];
 class SoundFX {
   constructor() {
     this.ctx = null;
-    this.enabled = localStorage.getItem('seif4d_sound') === 'true';
+    this.enabled = safeStorage.get('seif4d_sound') === 'true';
     this.initUI();
   }
 
@@ -35,7 +43,7 @@ class SoundFX {
 
   toggle() {
     this.enabled = !this.enabled;
-    localStorage.setItem('seif4d_sound', String(this.enabled));
+    safeStorage.set('seif4d_sound', String(this.enabled));
     this.updateIcon();
     if (this.enabled) {
       this.initContext();
@@ -164,10 +172,10 @@ const translations = {
     "nav.more": "More",
     "hero.kicker1": "CREATIVE DEVELOPER",
     "hero.kicker2": "BUILDER",
-    "hero.tagline": "I don’t fit into one box.<br><mark>So I build my own.</mark>",
-    "hero.intro": "Design. Code. Ideas. Impact.<br>I build digital products, brands, systems and experiments — from rough idea to something real.",
+    "hero.tagline": "I turn ideas into<br><mark>digital products.</mark>",
+    "hero.intro": "Strategy, design and engineering in one build process.<br>I create clear, fast web products for brands, founders and teams.",
     "hero.btnWork": "Explore my work",
-    "hero.btnAbout": "More about me",
+    "hero.btnAbout": "Discuss a project",
     "hero.stat1": "Selected projects",
     "hero.stat2": "Ideas in motion",
     "hero.stat3": "Build · Learn · Evolve",
@@ -177,10 +185,10 @@ const translations = {
     "work.title": "Ideas<br>into impact.",
     "work.lead": "A curated set of real products, client work and ventures where code, design and strategy meet execution.",
     "filter.all": "All Works (6)",
-    "filter.web": "Web & Apps (3)",
+    "filter.web": "Web & Apps (4)",
     "filter.ai": "AI Systems (2)",
-    "filter.venture": "Ventures & Studio (2)",
-    "proj.hint": "Quick View",
+    "filter.venture": "Ventures & Studio (3)",
+    "proj.hint": "Read case study",
     "proj.harmed.sub": "Medical wear / Brand & web",
     "proj.viacairo.sub": "Travel / Bilingual experience",
     "proj.qurani.sub": "Quran / Digital product",
@@ -238,11 +246,11 @@ const translations = {
     "faq.q1": "What kinds of projects does SEIF4D specialize in?",
     "faq.a1": "I specialize in end-to-end digital experiences: high-performance web applications, bespoke frontend architectures, practical AI & RAG implementations, and rapid MVP design for venture founders.",
     "faq.q2": "Are you available for remote work and international clients?",
-    "faq.a2": "Yes, absolutely. While based in Cairo, Egypt (UTC+3), I routinely collaborate with partners across the Middle East (Saudi Arabia, UAE, Qatar), Europe, and North America with agile communication.",
+    "faq.a2": "Yes. I am based in Cairo and available for remote project conversations. The delivery model and working hours are agreed for each engagement.",
     "faq.q3": "How do you integrate Artificial Intelligence into products?",
-    "faq.a3": "I avoid gimmicks. I build functional AI systems: Retrieval-Augmented Generation (RAG) over proprietary knowledge bases, automated agent workflows, and fast semantic search that directly boost user efficiency.",
+    "faq.a3": "I assess AI as a product capability, then use it only when the data, workflow and user need justify it. Verified AI case studies will be published as their evidence becomes ready.",
     "faq.q4": "What is your typical development timeline and workflow?",
-    "faq.a4": "A standard sprint moves through four clear stages: Exploration & Architecture (Week 1), Focused Prototyping & Build (Weeks 2–3), Iteration & Hardening (Week 4), and Production Launch.",
+    "faq.a4": "Each project moves through exploration, a focused build, review and launch. Timing depends on scope, content, integrations and the evidence needed to approve the release.",
     "faq.q5": "How can we start a collaboration or project?",
     "faq.a5": "Send an inquiry via email or reach out on GitHub, X, or YouTube. Share a brief summary of your vision, timeline, and goals, and we can schedule an initial discovery discussion.",
     "contact.index": "06 / CONNECT",
@@ -276,10 +284,10 @@ const translations = {
     "nav.more": "المزيد",
     "hero.kicker1": "مطور مبدع",
     "hero.kicker2": "مؤسس منتجات",
-    "hero.tagline": "لا أضع نفسي في قالب محدد.<br><mark>بل أبني قالبي الخاص.</mark>",
-    "hero.intro": "تصميم. كود. أفكار. تأثير.<br>أبني منتجات رقمية، علامات تجارية، أنظمة ذكاء اصطناعي وتجارب تفاعلية — من الفكرة المبدئية إلى أرض الواقع.",
+    "hero.tagline": "أحوّل الأفكار إلى<br><mark>منتجات رقمية.</mark>",
+    "hero.intro": "استراتيجية وتصميم وتطوير ضمن عملية بناء واحدة.<br>أصنع منتجات ويب واضحة وسريعة للعلامات ورواد الأعمال والفرق.",
     "hero.btnWork": "استكشف أعمالي",
-    "hero.btnAbout": "المزيد عني",
+    "hero.btnAbout": "ناقش مشروعك",
     "hero.stat1": "مشاريع مختارة",
     "hero.stat2": "أفكار قيد الحركة",
     "hero.stat3": "بناء · تعلم · تطور",
@@ -289,10 +297,10 @@ const translations = {
     "work.title": "أفكار تتحول<br>إلى تأثير واقعي.",
     "work.lead": "مجموعة منتقاة من المنتجات الحية ومشاريع العملاء والمبادرات التي يلتقي فيها الكود مع التصميم والاستراتيجية.",
     "filter.all": "كل الأعمال (6)",
-    "filter.web": "الويب والتطبيقات (3)",
+    "filter.web": "الويب والتطبيقات (4)",
     "filter.ai": "أنظمة الذكاء الاصطناعي (2)",
-    "filter.venture": "المشاريع والاستوديو (2)",
-    "proj.hint": "عرض التفاصيل",
+    "filter.venture": "المشاريع والاستوديو (3)",
+    "proj.hint": "اقرأ دراسة الحالة",
     "proj.harmed.sub": "أزياء طبية / هوية وتجارة إلكترونية",
     "proj.viacairo.sub": "سياحة وثقافة / تجربة تفاعلية",
     "proj.qurani.sub": "القرآن الكريم / منتج رقمي",
@@ -350,11 +358,11 @@ const translations = {
     "faq.q1": "ما هي نوعية المشاريع التي يتخصص فيها SEIF4D؟",
     "faq.a1": "أتخصص في بناء التجارب الرقمية الشاملة: تطبيقات الويب عالية الأداء، واجهات أمامية مخصصة، تطبيقات الذكاء الاصطناعي العملي والـ RAG، وبناء نماذج الـ MVP السريعة لرواد الأعمال.",
     "faq.q2": "هل تقدم خدماتك للعملاء عن بعد ودولياً في الخليج والعالم؟",
-    "faq.a2": "نعم بالتأكيد. انطلاقاً من القاهرة (توقيت UTC+3)، أتعاون بسلاسة مع شركاء في الخليج العربي (السعودية، الإمارات، قطر) وأوروبا وأمريكا الشمالية بتواصل مرن وشفاف.",
+    "faq.a2": "نعم. أعمل من القاهرة ومتاح لمناقشة المشاريع عن بُعد، ويتم الاتفاق على أسلوب التسليم وساعات العمل بما يناسب كل تعاون.",
     "faq.q3": "كيف تدمج الذكاء الاصطناعي في المنتجات الرقمية؟",
-    "faq.a3": "أبتعد عن الاستعراضات غير المجدية، وأركز على أنظمة ذكاء اصطناعي عملية: أنظمة RAG فوق قواعد بيانات المؤسسات، وكلاء أذكياء لأتمتة المهام، والبحث الدلالي فائق السرعة.",
+    "faq.a3": "أتعامل مع الذكاء الاصطناعي كقدرة داخل المنتج، ولا أستخدمه إلا عندما تبرره البيانات ومسار العمل وحاجة المستخدم. ستُنشر دراسات الحالة الموثقة عند جاهزية أدلتها.",
     "faq.q4": "كم من الوقت يستغرق تطوير مشروع جديد أو نموذج أولي (MVP)؟",
-    "faq.a4": "يستغرق نموذج الـ MVP المتكامل عادة ما بين أسبوعين إلى 6 أسابيع، متبعاً مراحل واضحة: الاستكشاف والمعمارية (الأسبوع 1)، النمذجة والبناء (الأسابيع 2-3)، التحسين والاختبار (الأسبوع 4)، ثم الإطلاق.",
+    "faq.a4": "يمر كل مشروع بالاستكشاف والبناء المركز والمراجعة ثم الإطلاق. تختلف المدة حسب النطاق والمحتوى والتكاملات والأدلة المطلوبة لاعتماد الإصدار.",
     "faq.q5": "كيف يمكننا بدء التعاون أو طلب مشروع؟",
     "faq.a5": "يمكنك مراسلتي مباشرة عبر البريد الإلكتروني أو من خلال حساباتي على GitHub أو X أو YouTube مع نبذة عن فكرتك وجدولك الزمني لنرتب جلسة استكشاف ومناقشة تفصيلية.",
     "contact.index": "06 / تواصل معي",
@@ -380,7 +388,7 @@ class I18nEngine {
   constructor() {
     const urlParams = new URLSearchParams(window.location.search);
     const urlLang = urlParams.get('lang');
-    this.current = urlLang === 'ar' ? 'ar' : (localStorage.getItem('seif4d_lang') || 'en');
+    this.current = (urlLang === 'ar' || urlLang === 'en') ? urlLang : (safeStorage.get('seif4d_lang') || 'en');
     this.init();
   }
 
@@ -391,16 +399,29 @@ class I18nEngine {
       btn.addEventListener('click', () => {
         sfx.playPop();
         const next = this.current === 'en' ? 'ar' : 'en';
-        this.apply(next);
+        this.apply(next, true);
       });
     }
   }
 
-  apply(lang) {
+  apply(lang, updateUrl = false) {
     this.current = lang;
-    localStorage.setItem('seif4d_lang', lang);
+    safeStorage.set('seif4d_lang', lang);
     document.documentElement.lang = lang;
     document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+    if (updateUrl && window.location.protocol !== 'file:') {
+      const nextUrl = new URL(window.location.href);
+      nextUrl.searchParams.set('lang', lang);
+      window.history.replaceState({}, '', nextUrl);
+    }
+
+    const meta = lang === 'ar'
+      ? { title: 'SEIF4D — مطور وباني منتجات رقمية', description: 'سيف مطور وباني منتجات من القاهرة، يجمع الاستراتيجية والتصميم والتطوير لبناء تجارب ويب واضحة وسريعة.' }
+      : { title: 'SEIF4D — Developer & Product Builder', description: 'Seif is a Cairo-based developer and product builder combining strategy, design and engineering to create clear, fast web products.' };
+    document.title = meta.title;
+    const description = document.querySelector('meta[name="description"]');
+    if (description) description.setAttribute('content', meta.description);
 
     const btnText = $('.lang-btn .lang-text');
     if (btnText) {
@@ -415,6 +436,22 @@ class I18nEngine {
       }
     });
 
+    $$('.project-card').forEach(card => {
+      const target = new URL(card.getAttribute('href'), window.location.href);
+      target.searchParams.set('lang', lang);
+      card.setAttribute('href', target.href);
+    });
+
+    const projectLabels = {
+      en: { harmed: 'Read the Harmed project case study', 'via-cairo': 'Read the Via Cairo project case study', qurani: 'Read the Qurani project case study', dragon: 'Read the DRAGON venture profile', scope: 'Read the SCOPE studio profile', volt: 'Read the VOLT project case study' },
+      ar: { harmed: 'اقرأ دراسة مشروع Harmed', 'via-cairo': 'اقرأ دراسة مشروع Via Cairo', qurani: 'اقرأ دراسة مشروع Qurani', dragon: 'اقرأ ملف مشروع DRAGON', scope: 'اقرأ ملف استوديو SCOPE', volt: 'اقرأ دراسة مشروع VOLT' }
+    };
+    $$('.project-card').forEach(card => card.setAttribute('aria-label', projectLabels[lang][card.dataset.projectId]));
+    const contactDock = $('.app-nav a[data-section="contact"]');
+    if (contactDock) contactDock.setAttribute('aria-label', lang === 'ar' ? 'تواصل مع سيف' : 'Contact Seif');
+    const filterStatus = $('#filter-status');
+    if (filterStatus) filterStatus.textContent = lang === 'ar' ? 'عرض 6 مشاريع' : 'Showing 6 projects';
+
     updateCairoBadge();
   }
 }
@@ -425,7 +462,7 @@ const i18n = new I18nEngine();
 // ==========================================================================
 const projectsData = {
   "harmed": {
-    img: "assets/harmed.png",
+    img: "assets/harmed-cover-v2.jpg",
     isLive: true,
     liveUrl: "https://seif4d.github.io/Harmed/",
     en: {
@@ -454,7 +491,7 @@ const projectsData = {
     }
   },
   "via-cairo": {
-    img: "assets/via-cairo.png",
+    img: "assets/via-cairo-cover-v2.jpg",
     isLive: false,
     liveUrl: "#contact",
     en: {
@@ -483,7 +520,7 @@ const projectsData = {
     }
   },
   "qurani": {
-    img: "assets/qurani.png",
+    img: "assets/qurani-cover-v2.jpg",
     isLive: true,
     liveUrl: "https://seif4d.github.io/GPT-Quran/",
     en: {
@@ -512,7 +549,7 @@ const projectsData = {
     }
   },
   "dragon": {
-    img: "assets/dragon.png",
+    img: "assets/dragon-cover-v2.jpg",
     isLive: false,
     liveUrl: "#contact",
     en: {
@@ -541,7 +578,7 @@ const projectsData = {
     }
   },
   "scope": {
-    img: "assets/scope.png",
+    img: "assets/scope-cover-v2.jpg",
     isLive: false,
     liveUrl: "#contact",
     en: {
@@ -570,7 +607,7 @@ const projectsData = {
     }
   },
   "volt": {
-    img: "assets/volt.png",
+    img: "assets/volt-cover-v2.jpg",
     isLive: true,
     liveUrl: "https://voltmsg.store/",
     en: {
@@ -681,14 +718,6 @@ if (drawerBackdrop) {
   });
 }
 
-// Bind project cards to drawer
-$$('.project-card').forEach(card => {
-  card.addEventListener('click', () => {
-    const id = card.getAttribute('data-project-id');
-    if (id) openProjectDrawer(id);
-  });
-});
-
 // ==========================================================================
 // 4. Project Filtering
 // ==========================================================================
@@ -698,26 +727,39 @@ const projectCards = $$('.project-card');
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     sfx.playTick();
-    filterBtns.forEach(b => b.classList.remove('active'));
+    filterBtns.forEach(b => {
+      b.classList.remove('active');
+      b.setAttribute('aria-pressed', 'false');
+    });
     btn.classList.add('active');
+    btn.setAttribute('aria-pressed', 'true');
 
     const filter = btn.getAttribute('data-filter');
+    let visibleCount = 0;
 
     projectCards.forEach(card => {
       const cat = card.getAttribute('data-category') || '';
       if (filter === 'all' || cat.includes(filter)) {
+        visibleCount += 1;
         card.classList.remove('hidden');
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(12px)';
-        setTimeout(() => {
-          card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, 30);
+        if (!reducedMotion) {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(12px)';
+          setTimeout(() => {
+            card.style.transition = 'opacity 0.3s ease, transform 0.3s ease';
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0)';
+          }, 30);
+        }
       } else {
         card.classList.add('hidden');
       }
     });
+    const filterStatus = $('#filter-status');
+    if (filterStatus) {
+      const isAr = document.documentElement.lang === 'ar';
+      filterStatus.textContent = isAr ? `عرض ${visibleCount} مشاريع` : `Showing ${visibleCount} projects`;
+    }
   });
 });
 
@@ -787,12 +829,20 @@ function logToTerminal(msg, type = 'info') {
   paletteResults.prepend(div);
 }
 
+function logUserToTerminal(msg) {
+  if (!paletteResults) return;
+  const div = document.createElement('div');
+  div.className = 'palette-log dim';
+  div.textContent = `> ${msg}`;
+  paletteResults.prepend(div);
+}
+
 function executeCommand(raw) {
   const cmd = raw.trim().toLowerCase();
   if (!cmd) return;
 
   sfx.playPop();
-  logToTerminal(`&gt; ${cmd}`, 'dim');
+  logUserToTerminal(cmd);
 
   switch (cmd) {
     case 'help':
@@ -1040,38 +1090,97 @@ appMenuButton?.addEventListener('click', () => setMenu(true));
 menu?.addEventListener('click', (e) => { if (e.target === menu) setMenu(false); });
 $$('.mobile-sheet a').forEach(a => a.addEventListener('click', () => setMenu(false)));
 
-// Reveal on scroll observer
+// Reveal on scroll observer with stagger support
 const revealObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      entry.target.classList.add('visible');
-      obs.unobserve(entry.target);
+      // Calculate stagger delay from class
+      const el = entry.target;
+      const staggerMatch = [...el.classList].find(c => c.startsWith('stagger-'));
+      if (staggerMatch) {
+        const delay = parseInt(staggerMatch.split('-')[1], 10) * 80;
+        el.style.transitionDelay = `${delay}ms`;
+      }
+      el.classList.add('visible');
+      obs.unobserve(el);
     }
   });
-}, { threshold: 0.1, rootMargin: '0px 0px -25px' });
+}, { threshold: 0.08, rootMargin: '0px 0px -40px' });
 
 $$('.reveal').forEach(el => revealObserver.observe(el));
 
-// Number Counter Animation
+// Smooth Eased Number Counter Animation
 const counterObserver = new IntersectionObserver((entries, obs) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       const el = entry.target;
       const target = parseInt(el.getAttribute('data-target') || '6', 10);
-      let count = 0;
-      const duration = 1200;
-      const step = Math.ceil(duration / target);
-      const timer = setInterval(() => {
-        count++;
-        el.textContent = count < 10 ? `0${count}` : `${count}`;
-        if (count >= target) clearInterval(timer);
-      }, step);
+      const duration = 1800;
+      const startTime = performance.now();
+
+      const easeOutQuart = (t) => 1 - Math.pow(1 - t, 4);
+
+      const animate = (now) => {
+        const elapsed = now - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const easedProgress = easeOutQuart(progress);
+        const current = Math.round(easedProgress * target);
+        el.textContent = current < 10 ? `0${current}` : `${current}`;
+        if (progress < 1) requestAnimationFrame(animate);
+      };
+      requestAnimationFrame(animate);
       obs.unobserve(el);
     }
   });
 }, { threshold: 0.5 });
 
 $$('.counter').forEach(c => counterObserver.observe(c));
+
+// ==========================================================================
+// Text Scramble Effect on Scroll Reveal
+// ==========================================================================
+class TextScramble {
+  constructor(el) {
+    this.el = el;
+    this.chars = '!<>-_\\/[]{}—=+*^?#_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    this.originalText = el.textContent;
+  }
+
+  scramble() {
+    const text = this.originalText;
+    const length = text.length;
+    let iteration = 0;
+    const maxIterations = length * 3;
+
+    const interval = setInterval(() => {
+      this.el.textContent = text.split('').map((char, i) => {
+        if (char === ' ' || char === '/' || char === '·') return char;
+        if (i < iteration / 3) return text[i];
+        return this.chars[Math.floor(Math.random() * this.chars.length)];
+      }).join('');
+
+      iteration++;
+      if (iteration >= maxIterations) {
+        this.el.textContent = text;
+        clearInterval(interval);
+      }
+    }, 25);
+  }
+}
+
+const scrambleObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const scrambler = new TextScramble(entry.target);
+      scrambler.scramble();
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.5 });
+
+if (!reducedMotion && document.documentElement.lang !== 'ar') {
+  $$('.section-index').forEach(el => scrambleObserver.observe(el));
+}
 
 // Navigation Scroll Spy
 const sectionIds = ['top', 'work', 'build', 'process', 'about', 'faq', 'contact'];
@@ -1101,10 +1210,15 @@ const onScroll = () => {
     process: 'build',
     about: 'about',
     faq: 'about',
-    contact: 'about'
+    contact: 'contact'
   };
   const activeApp = appSectionMap[current] || current;
-  appLinks.forEach(a => a.classList.toggle('active', a.dataset.section === activeApp));
+  appLinks.forEach(a => {
+    const active = a.dataset.section === activeApp;
+    a.classList.toggle('active', active);
+    if (active) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
 
   desktopLinks.forEach(a => {
     const href = a.getAttribute('href');
@@ -1189,8 +1303,33 @@ if (!reducedMotion && window.matchMedia('(pointer:fine)').matches) {
       btn.style.transform = '';
     });
   });
+
+  // Project Card Spotlight Effect
+  $$('.project-card').forEach(card => {
+    card.addEventListener('pointermove', e => {
+      const r = card.getBoundingClientRect();
+      card.style.setProperty('--spot-x', `${e.clientX - r.left}px`);
+      card.style.setProperty('--spot-y', `${e.clientY - r.top}px`);
+    });
+  });
 }
 
 // Copyright Year
 const yearEl = $('#year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ==========================================================================
+// Back to Top Button
+// ==========================================================================
+const backToTop = $('#back-to-top');
+if (backToTop) {
+  const toggleBackToTop = () => {
+    backToTop.classList.toggle('visible', window.scrollY > 600);
+  };
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+  backToTop.addEventListener('click', () => {
+    sfx.playPop();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
