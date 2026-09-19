@@ -644,10 +644,15 @@ main {
   max-width: 680px;
   color: #f0f2f3;
 }
-.hero h2 mark, .about h2 mark {
+.hero h2 mark {
   background: linear-gradient(180deg, transparent 55%, rgba(200, 255, 53, 0.35) 55% 92%, transparent 92%);
   color: #fff;
   padding: 0 0.04em;
+}
+.about h2 mark {
+  background: linear-gradient(180deg, transparent 50%, rgba(200, 255, 53, 0.75) 50% 92%, transparent 92%);
+  color: var(--ink);
+  padding: 0 0.06em;
 }
 .hero-intro {
   font-size: 0.95rem;
