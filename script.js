@@ -166,6 +166,7 @@ const translations = {
     "nav.about": "About",
     "nav.faq": "FAQ",
     "nav.contact": "Contact",
+    "nav.blog": "Blog",
     "nav.terminal": "Terminal",
     "nav.cta": "Let’s build",
     "nav.home": "Home",
@@ -227,7 +228,7 @@ const translations = {
     "process.s3.desc": "Measure, learn, remove friction and make the product sharper.",
     "process.s4.title": "Scale",
     "process.s4.desc": "Strengthen the system, infrastructure and growth loops around what works.",
-    "process.statement": "“Ideas mean nothing<br>without execution.”",
+    "process.statement": "Ideas mean nothing<br><span>without execution.</span>",
     "process.p1": "BUILD",
     "process.p2": "LEARN",
     "process.p3": "ITERATE",
@@ -286,6 +287,7 @@ const translations = {
     "nav.about": "نبذة",
     "nav.faq": "الأسئلة",
     "nav.contact": "تواصل",
+    "nav.blog": "المدونة",
     "nav.terminal": "الأوامر",
     "nav.cta": "لنبدأ البناء",
     "nav.home": "الرئيسية",
@@ -347,7 +349,7 @@ const translations = {
     "process.s3.desc": "القياس والتعلم وإزالة أي عقبات لجعل المنتج أكثر حدة وفاعلية.",
     "process.s4.title": "التوسع والنمو",
     "process.s4.desc": "تعزيز بنية النظام، البنية التحتية، وحلقات النمو حول ما ثبت نجاحه فعلياً.",
-    "process.statement": "“الأفكار لا تعني شيئاً<br>دون تنفيذ حقيقي.”",
+    "process.statement": "الأفكار لا تعني شيئاً<br><span>دون تنفيذ حقيقي.</span>",
     "process.p1": "بناء",
     "process.p2": "تعلم",
     "process.p3": "تطوير",
@@ -442,7 +444,7 @@ class I18nEngine {
 
     const btnText = $('.lang-btn .lang-text');
     if (btnText) {
-      btnText.textContent = lang === 'en' ? 'عربي' : 'English';
+      btnText.textContent = lang === 'en' ? 'AR' : 'EN';
     }
 
     const dict = translations[lang] || translations.en;

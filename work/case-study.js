@@ -10,7 +10,7 @@
     document.body.dir = next === 'ar' ? 'rtl' : 'ltr';
     document.documentElement.dir = document.body.dir;
     document.documentElement.lang = next;
-    document.querySelector('[data-language]').textContent = next === 'ar' ? 'English' : 'العربية';
+    document.querySelector('[data-language]').textContent = next === 'ar' ? 'EN' : 'AR';
     document.title = document.body.dataset[next === 'ar' ? 'titleAr' : 'titleEn'];
     const description = document.querySelector('meta[name="description"]');
     if (description) description.content = document.body.dataset[next === 'ar' ? 'descriptionAr' : 'descriptionEn'];

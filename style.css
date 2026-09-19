@@ -1195,24 +1195,42 @@ main {
 }
 
 .statement {
-  margin-top: 24px;
+  margin-top: 28px;
   min-height: 180px;
   border: 1px solid #282e30;
-  border-radius: 18px;
+  border-radius: 20px;
   display: grid;
-  grid-template-columns: 1fr 2fr 0.7fr;
+  grid-template-columns: 1.15fr 1.85fr 0.7fr;
   align-items: center;
   overflow: hidden;
-  background: #0f1213;
+  background: linear-gradient(145deg, #131718, #0c0e0f);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
 }
-.statement > div:first-child {
-  padding: 30px;
+.statement-body {
+  padding: 28px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  border-inline-start: 3px solid var(--lime);
 }
-.statement p {
-  font-size: clamp(1.5rem, 2.5vw, 2.3rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+.statement-icon {
+  color: var(--lime);
+  opacity: 0.9;
+  width: 28px;
+  height: 22px;
+}
+.statement blockquote, .statement p {
+  font-size: clamp(1.35rem, 2.2vw, 2.05rem);
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  color: #f0efe8;
   margin: 0;
+}
+.statement blockquote span, .statement p span {
+  color: var(--lime);
+  font-weight: 800;
 }
 .statement img {
   width: 100%;
@@ -1936,33 +1954,49 @@ main {
 
 
 
-/* 5. Animated Gradient Borders on Process Cards */
-@property --gradient-angle {
-  syntax: "<angle>";
-  initial-value: 0deg;
-  inherits: false;
-}
-@keyframes rotate-gradient {
-  0% { --gradient-angle: 0deg; }
-  100% { --gradient-angle: 360deg; }
-}
+/* 5. Refined Hover Effects on Process Cards */
 .process-track li {
   position: relative;
   z-index: 1;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
 }
 .process-track li::before {
   content: "";
   position: absolute;
-  inset: -1px;
-  border-radius: inherit;
-  background: conic-gradient(from var(--gradient-angle), transparent 25%, var(--lime) 50%, transparent 75%);
-  z-index: -1;
+  top: 0;
+  left: 18px;
+  right: 18px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--lime), transparent);
   opacity: 0;
-  transition: opacity var(--transition);
-  animation: rotate-gradient 4s linear infinite;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.process-track li:hover {
+  border-color: rgba(200, 255, 53, 0.45);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 20px rgba(200, 255, 53, 0.08);
+  transform: translateY(-4px);
+  background: linear-gradient(145deg, #1e2325, #111416);
 }
 .process-track li:hover::before {
   opacity: 1;
+}
+.process-track li:hover i {
+  background: var(--lime);
+  color: #0b0e0f;
+  border-color: var(--lime);
+  box-shadow: 0 0 16px rgba(200, 255, 53, 0.35);
+  transform: scale(1.08);
+}
+.process-track li:hover b {
+  color: var(--lime);
+}
+.process-track i {
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.process-track b {
+  transition: color 0.25s ease;
 }
 
 /* 6. Infinite Scroll Marquee for Identity Strip */
@@ -2589,17 +2623,17 @@ details[open] summary ~ * {
     color: #e8ebec;
   }
   .app-nav a.active {
-    color: var(--lime);
-    background: rgba(200, 255, 53, 0.09);
+    color: #0b0e0f;
+    background: var(--lime);
   }
   .app-nav a.active svg.app-icon {
-    transform: scale(1.06);
-    stroke: var(--lime);
-    filter: drop-shadow(0 0 5px rgba(200, 255, 53, 0.35));
+    transform: scale(1.08);
+    stroke: #0b0e0f;
+    filter: none;
   }
   .app-nav a.active small {
-    color: #fff;
-    font-weight: 750;
+    color: #0b0e0f;
+    font-weight: 800;
   }
   .app-nav button {
     cursor: pointer;
